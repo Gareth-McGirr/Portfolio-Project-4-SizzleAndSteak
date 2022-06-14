@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'home',
     'booking',
+    'rangefilter',
 ]
 
 SITE_ID = 1
