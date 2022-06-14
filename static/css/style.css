@@ -3,6 +3,10 @@ body {
     height: 100%;    
 }
 
+header {
+    background-color: black;
+}
+
 body {
     display: flex;
     flex-direction: column;

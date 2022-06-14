@@ -19,7 +19,7 @@
                         <a class="nav-link" aria-current="page" href="#">Bookings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Create Booking</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'createbooking' %}">Create Booking</a>
                     </li>
                     {% endif %}
                     {% if user.is_staff %}
