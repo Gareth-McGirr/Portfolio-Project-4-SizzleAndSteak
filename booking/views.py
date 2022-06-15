@@ -38,3 +38,16 @@ class CreateBookingView(LoginRequiredMixin, generic.CreateView):
         print(f"lowest_capacity_table is : {lowest_capacity_table}")
         form.instance.booked_table = lowest_capacity_table
         return super(CreateBookingView, self).form_valid(form)
+
+
+class BookingsList(LoginRequiredMixin, generic.ListView):
+    """
+    View to render ManageBookings
+    """
+    model = Booking
+    template_name = 'booking/managebookings.html'
+    def get_queryset(self):
+        if self.request.user.is_staff:
+            return Booking.objects.all()
+        else:
+            return Booking.objects.filter(customer=self.request.user)

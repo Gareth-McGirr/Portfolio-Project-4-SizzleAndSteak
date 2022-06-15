@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <h2>Bookings List</h2>
+
+    <table class="table">
+        <tr>
+            <th>Booking Reference</th>
+            <th>Customer</th>
+            <th>Date</th>
+            <th>Time Slot</th>
+            <th>No. Guests</th>
+            {% if user.is_staff %}
+            <th>Table:</th>
+            <th>Capacity:</th>
+            {% endif %}
+        </tr>
+        {% for booking in object_list %}
+        <tr>
+            <td>
+                {{ booking.pk }}
+            </td>
+            <td>
+                {{ booking.customer }}
+            </td>
+            <td>
+                {{ booking.booking_date }}
+            </td>
+            <td>
+                {{ booking.get_booking_time_display }}
+            </td>
+            <td>
+                {{ booking.number_of_guests }}
+            </td>
+            {% if user.is_staff %}
+            <td>
+                {{ booking.booked_table }}
+            </td>
+            <td>
+                {{ booking.booked_table.capacity }}
+            </td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{%endblock%}
