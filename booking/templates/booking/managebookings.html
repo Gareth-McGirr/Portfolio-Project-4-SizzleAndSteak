@@ -42,6 +42,9 @@
                 {{ booking.booked_table.capacity }}
             </td>
             {% endif %}
+            <td>
+                <a href="{% url 'editbooking' booking.id %}" class="btn m-2">Edit</a>
+            </td>
         </tr>
         {% endfor %}
     </table>

@@ -1,5 +1,5 @@
 from django.views import generic
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Booking, Table
 from .forms import BookingForm
 
@@ -51,3 +51,20 @@ class BookingsList(LoginRequiredMixin, generic.ListView):
             return Booking.objects.all()
         else:
             return Booking.objects.filter(customer=self.request.user)
+        
+        
+class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
+    """
+    A view to provide a Form to the user
+    to edit an event
+    """
+    form_class = BookingForm
+    template_name = 'booking/edit_booking.html'
+    success_url = "/booking/managebookings"
+    model = Booking
+
+    def test_func(self):
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().customer
