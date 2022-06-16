@@ -68,3 +68,15 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
             return True
         else:
             return self.request.user == self.get_object().customer
+        
+        
+class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+    """ A view to delete an event """
+    model = Booking
+    success_url = "/booking/managebookings"
+
+    def test_func(self):
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().customer

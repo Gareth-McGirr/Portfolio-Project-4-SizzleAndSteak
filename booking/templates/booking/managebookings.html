@@ -45,6 +45,9 @@
             <td>
                 <a href="{% url 'editbooking' booking.id %}" class="btn m-2">Edit</a>
             </td>
+            <td>
+                <a href="{% url 'delete_booking' booking.id %}" class="btn m-2">Delete</a>
+            </td>
         </tr>
         {% endfor %}
     </table>

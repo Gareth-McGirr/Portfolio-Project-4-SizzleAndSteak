@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{{ form.media }}
+
+{% block content %}
+<h1 class="text-center">Confirm Booking Deletion</h1>
+<div class="d-flex justify-content-center pt-3">
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete Booking: "{{ object.pk }}"?</p>
+        <p>Customer: {{ object.customer }}</p>
+        <p>Table: {{ object.booked_table }}</p>
+        <p>Date: {{ object.booking_date }}</p>
+        <p>Time: {{ object.get_booking_time_display }}</p>
+
+        <input type="submit" value="Confirm" class="btn green-btn">
+    </form>
+</div>
+{% endblock %}
