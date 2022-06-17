@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    {% for menu in object_list %}
+    <p>
+        <h2>{{ menu.menu_name }}</h2>
+        <p>
+            -------------------------------
+        <ul>
+            {% for item in menu.menu_items.all %}
+            <p>
+            <li>{{ item.menu_item_type }}</li>
+            <li>{{ item.menu_item_name }}</li>
+            <li>£{{ item.menu_item_price }}</li>
+            {% if item.contains_nuts %}
+            <span>*Contains nuts*</span>
+            {% endif %}
+            {% if item.vegetarian %}
+            <span>*Vegetarian*</span>
+            {% endif %}
+            {% if item.vegan %}
+            <span>*Vegan*</span>
+            {% endif %}
+            </p>
+        {% endfor %}
+    </ul>
+            --------------------------------
+    </p>
+    </p>
+    {% endfor %}
+</div>
+
+{%endblock%}
