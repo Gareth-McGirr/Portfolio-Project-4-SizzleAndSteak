@@ -9,7 +9,7 @@ class MenuListView(generic.ListView):
     model = Menu
     template_name = 'menu/menus.html'
     def get_queryset(self):
-        return Menu.objects.all()
+        return Menu.objects.filter(menu_active=True)
     
 class CreateMenuView(generic.CreateView):
     model = Menu

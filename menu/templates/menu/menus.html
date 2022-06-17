@@ -4,31 +4,83 @@
 
 <div class="container-fluid">
     {% for menu in object_list %}
+    -------------------------------------------------------------------
     <p>
         <h2>{{ menu.menu_name }}</h2>
         <p>
-            -------------------------------
-        <ul>
-            {% for item in menu.menu_items.all %}
-            <p>
-            <li>{{ item.menu_item_type }}</li>
-            <li>{{ item.menu_item_name }}</li>
-            <li>£{{ item.menu_item_price }}</li>
-            {% if item.contains_nuts %}
-            <span>*Contains nuts*</span>
-            {% endif %}
-            {% if item.vegetarian %}
-            <span>*Vegetarian*</span>
-            {% endif %}
-            {% if item.vegan %}
-            <span>*Vegan*</span>
-            {% endif %}
-            </p>
-        {% endfor %}
-    </ul>
-            --------------------------------
+            <h5>Starters</h5>
+
+            <ul>
+                {% for item in menu.menu_items.all %}
+                {% if item.menu_item_type == 'starter' %}
+                <p>
+                    <li>{{ item.menu_item_name }}</li>
+                    <li>£{{ item.menu_item_price }}</li>
+                    {% if item.contains_nuts %}
+                    <span>*Contains nuts*</span>
+                    {% endif %}
+                    {% if item.vegetarian %}
+                    <span>*Vegetarian*</span>
+                    {% endif %}
+                    {% if item.vegan %}
+                    <span>*Vegan*</span>
+                    {% endif %}
+                </p>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </p>
+
+        <p>
+            <h5>Main Courses</h5>
+
+            <ul>
+                {% for item in menu.menu_items.all %}
+                {% if item.menu_item_type == 'main' %}
+                <p>
+                    <li>{{ item.menu_item_name }}</li>
+                    <li>£{{ item.menu_item_price }}</li>
+                    {% if item.contains_nuts %}
+                    <span>*Contains nuts*</span>
+                    {% endif %}
+                    {% if item.vegetarian %}
+                    <span>*Vegetarian*</span>
+                    {% endif %}
+                    {% if item.vegan %}
+                    <span>*Vegan*</span>
+                    {% endif %}
+                </p>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </p>
+
+
+        <p>
+            <h5>Desserts</h5>
+
+            <ul>
+                {% for item in menu.menu_items.all %}
+                {% if item.menu_item_type == 'desert' %}
+                <p>
+                    <li>{{ item.menu_item_name }}</li>
+                    <li>£{{ item.menu_item_price }}</li>
+                    {% if item.contains_nuts %}
+                    <span>*Contains nuts*</span>
+                    {% endif %}
+                    {% if item.vegetarian %}
+                    <span>*Vegetarian*</span>
+                    {% endif %}
+                    {% if item.vegan %}
+                    <span>*Vegan*</span>
+                    {% endif %}
+                </p>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </p>
     </p>
-    </p>
+    -------------------------------------------------------------------
     {% endfor %}
 </div>
 

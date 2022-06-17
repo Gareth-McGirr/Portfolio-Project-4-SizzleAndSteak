@@ -5,8 +5,9 @@ ITEM_TYPES = (("starter","Starter"),("main","Main"),("desert","Desert"),("drink"
 
 
 class MenuItem(models.Model):
-    menu_item_name = models.CharField(max_length=25)
+    menu_item_name = models.CharField(max_length=50)
     menu_item_type = models.CharField(max_length=25, choices=ITEM_TYPES, default='starter')
+    menu_item_description = models.TextField(default="")
     menu_item_price = models.FloatField()
     contains_nuts = models.BooleanField(default=False)
     vegetarian = models.BooleanField(default=False)
@@ -22,6 +23,7 @@ class MenuItem(models.Model):
 class Menu(models.Model):
     menu_name = models.CharField(max_length=25)
     menu_items = models.ManyToManyField('MenuItem', related_name='menus')
+    menu_active = models.BooleanField(default=False)
     
     
     class Meta:

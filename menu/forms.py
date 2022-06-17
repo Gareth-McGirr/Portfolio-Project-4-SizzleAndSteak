@@ -1,3 +1,4 @@
+from email.policy import default
 from django import forms
 from .models import MenuItem, Menu
 
@@ -10,9 +11,10 @@ class CreateMenuForm(forms.ModelForm):
     
     class Meta:
         model = Menu
-        fields = ['menu_name', 'menu_items']
+        fields = ['menu_name', 'menu_active', 'menu_items']
         
     menu_name = forms.CharField()
+    menu_active = forms.CheckboxInput()
     menu_items = CustomMMCF(
         queryset=MenuItem.objects.all(),
         widget=forms.CheckboxSelectMultiple
