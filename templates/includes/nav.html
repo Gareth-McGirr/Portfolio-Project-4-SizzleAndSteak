@@ -24,7 +24,7 @@
                     {% endif %}
                     {% if user.is_staff %}
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Manage Menus</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'createmenu' %}">Create Menu</a>
                     </li>
                     {% endif %}
                     <li class="nav-item">
