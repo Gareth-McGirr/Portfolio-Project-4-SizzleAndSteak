@@ -14,10 +14,10 @@ class MenuItem(models.Model):
     gluten_free = models.BooleanField(default=False)
     
     class Meta:
-        ordering = ['menu_item_name']
+        ordering = ['menu_item_type', 'menu_item_name']
 
     def __str__(self):
-        return str(self.menu_item_name)
+        return str(self.menu_item_type) + ':' + str(self.menu_item_name)
     
 class Menu(models.Model):
     menu_name = models.CharField(max_length=25)

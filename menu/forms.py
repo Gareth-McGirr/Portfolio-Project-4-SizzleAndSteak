@@ -17,3 +17,10 @@ class CreateMenuForm(forms.ModelForm):
         queryset=MenuItem.objects.all(),
         widget=forms.CheckboxSelectMultiple
     )
+    
+    
+   
+    
+   
+    
+    
