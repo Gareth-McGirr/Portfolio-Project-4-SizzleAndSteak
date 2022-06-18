@@ -12,6 +12,11 @@ class CreateMenuForm(forms.ModelForm):
     class Meta:
         model = Menu
         fields = ['menu_name', 'menu_active', 'menu_items']
+        labels = {
+            'menu_name': 'Name',
+            'menu_active': 'Active',
+            'menu_items': 'Menu Items',
+        }
         
     menu_name = forms.CharField()
     menu_active = forms.CheckboxInput()
