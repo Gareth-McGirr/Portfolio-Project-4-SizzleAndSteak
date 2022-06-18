@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <h2>Menu List</h2>
+
+    <table class="table">
+        <tr>
+            <th>Name</th>
+            <th>Items</th>
+            <th>Active</th>
+            {% for menu in object_list %}
+        <tr>
+            <td>
+                {{ menu.menu_name }}
+            </td>
+            <td>
+                {% for item in menu.menu_items.all %}
+                    {{ item }} ,
+                {% endfor %}
+            </td>
+            <td>
+                {% if menu.menu_active %}
+                Yes
+                {% else %}
+                No
+                {% endif %}
+            </td>
+            <td>
+                <a href="{% url 'editmenu' menu.id %}" class="btn m-2">Edit</a>
+            </td>
+            <td>
+                <a href="#" class="btn m-2">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{%endblock%}
