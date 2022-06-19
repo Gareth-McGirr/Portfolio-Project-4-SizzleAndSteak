@@ -15,24 +15,34 @@
                         <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{% url 'managebookings' %}">Bookings</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{% url 'createbooking' %}">Create Booking</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Bookings
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" aria-current="page" href="{% url 'managebookings' %}">Manage Bookings</a></li>
+                            <li><a class="dropdown-item" aria-current="page" href="{% url 'createbooking' %}">New Booking</a></li>                       
+                        </ul>
                     </li>
                     {% endif %}
                     {% if user.is_staff %}
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{% url 'createmenu' %}">Create Menu</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Menus
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" aria-current="page" href="{% url 'menus' %}">View Menus</a></li>
+                            <li><a class="dropdown-item" aria-current="page" href="{% url 'createmenu' %}">Create Menu</a></li>
+                            <li><a class="dropdown-item" aria-current="page" href="{% url 'managemenus' %}">Manage Menus</a></li>                       
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="{% url 'managemenus' %}">Manage Menus</a>
-                    </li>
-                    {% endif %}
+                    {% else %}
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="{% url 'menus' %}">Menus</a>
                     </li>
+                    {% endif %}
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>

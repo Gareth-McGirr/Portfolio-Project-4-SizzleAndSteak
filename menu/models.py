@@ -8,7 +8,7 @@ class MenuItem(models.Model):
     menu_item_name = models.CharField(max_length=50)
     menu_item_type = models.CharField(max_length=25, choices=ITEM_TYPES, default='starter')
     menu_item_description = models.TextField(default="")
-    menu_item_price = models.FloatField()
+    menu_item_price = models.FloatField(default=0.00)
     contains_nuts = models.BooleanField(default=False)
     vegetarian = models.BooleanField(default=False)
     vegan = models.BooleanField(default=False)

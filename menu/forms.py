@@ -22,7 +22,7 @@ class CreateMenuForm(forms.ModelForm):
     menu_active = forms.CheckboxInput()
     menu_items = CustomMMCF(
         queryset=MenuItem.objects.all(),
-        widget=forms.CheckboxSelectMultiple
+        widget=forms.CheckboxSelectMultiple()
     )
     
     
