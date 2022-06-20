@@ -11,8 +11,7 @@
             <h5>Starters</h5>
 
             <ul>
-                {% for item in menu.menu_items.all %}
-                {% if item.menu_item_type == 'starter' %}
+                {% for item in menu.menu_items_starters.all %}
                 <p>
                     <li>{{ item.menu_item_name }}</li>
                     <li>£{{ item.menu_item_price }}</li>
@@ -26,17 +25,13 @@
                     <span>*Vegan*</span>
                     {% endif %}
                 </p>
-                {% endif %}
                 {% endfor %}
             </ul>
         </p>
-
         <p>
             <h5>Main Courses</h5>
-
             <ul>
-                {% for item in menu.menu_items.all %}
-                {% if item.menu_item_type == 'main' %}
+                {% for item in menu.menu_items_mains.all %}
                 <p>
                     <li>{{ item.menu_item_name }}</li>
                     <li>£{{ item.menu_item_price }}</li>
@@ -50,18 +45,13 @@
                     <span>*Vegan*</span>
                     {% endif %}
                 </p>
-                {% endif %}
                 {% endfor %}
             </ul>
         </p>
-
-
         <p>
-            <h5>Desserts</h5>
-
+            <h5>Deserts</h5>
             <ul>
-                {% for item in menu.menu_items.all %}
-                {% if item.menu_item_type == 'desert' %}
+                {% for item in menu.menu_items_deserts.all %}
                 <p>
                     <li>{{ item.menu_item_name }}</li>
                     <li>£{{ item.menu_item_price }}</li>
@@ -75,13 +65,57 @@
                     <span>*Vegan*</span>
                     {% endif %}
                 </p>
-                {% endif %}
                 {% endfor %}
             </ul>
         </p>
-    </p>
-    -------------------------------------------------------------------
-    {% endfor %}
+        <div>
+            <div>
+                <p>
+                    <h5>Sides</h5>
+                    <ul>
+                        {% for item in menu.menu_items_sides.all %}
+                        <p>
+                            <li>{{ item.menu_item_name }}</li>
+                            <li>£{{ item.menu_item_price }}</li>
+                            {% if item.contains_nuts %}
+                            <span>*Contains nuts*</span>
+                            {% endif %}
+                            {% if item.vegetarian %}
+                            <span>*Vegetarian*</span>
+                            {% endif %}
+                            {% if item.vegan %}
+                            <span>*Vegan*</span>
+                            {% endif %}
+                        </p>
+                        {% endfor %}
+                    </ul>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <h5>Drinks</h5>
+                    <ul>
+                        {% for item in menu.menu_items_drinks.all %}
+                        <p>
+                            <li>{{ item.menu_item_name }}</li>
+                            <li>£{{ item.menu_item_price }}</li>
+                            {% if item.contains_nuts %}
+                            <span>*Contains nuts*</span>
+                            {% endif %}
+                            {% if item.vegetarian %}
+                            <span>*Vegetarian*</span>
+                            {% endif %}
+                            {% if item.vegan %}
+                            <span>*Vegan*</span>
+                            {% endif %}
+                        </p>
+                        {% endfor %}
+                    </ul>
+                </p>
+            </div>
+        </div>
+        -------------------------------------------------------------------
+        {% endfor %}
 </div>
 
 {%endblock%}

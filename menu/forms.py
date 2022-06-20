@@ -37,11 +37,11 @@ class CreateMenuForm(forms.ModelForm):
         widget=forms.CheckboxSelectMultiple()
     )
     menu_items_drinks = CustomMMCF(
-        queryset=MenuItem.objects.filter(menu_item_type='drinks'),
+        queryset=MenuItem.objects.filter(menu_item_type='drink'),
         widget=forms.CheckboxSelectMultiple()
     )
     menu_items_sides = CustomMMCF(
-        queryset=MenuItem.objects.filter(menu_item_type='sides'),
+        queryset=MenuItem.objects.filter(menu_item_type='side'),
         widget=forms.CheckboxSelectMultiple()
     )
     
