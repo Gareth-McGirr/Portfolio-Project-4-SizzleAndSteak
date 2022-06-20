@@ -22,12 +22,17 @@ class MenuItem(models.Model):
     
 class Menu(models.Model):
     menu_name = models.CharField(max_length=25)
-    menu_items = models.ManyToManyField('MenuItem', related_name='menus')
     menu_active = models.BooleanField(default=False)
+    menu_items_starters = models.ManyToManyField('MenuItem', related_name='items_starters')
+    menu_items_mains = models.ManyToManyField('MenuItem', related_name='items_mains')
+    menu_items_deserts = models.ManyToManyField('MenuItem', related_name='items_deserts')
+    menu_items_drinks = models.ManyToManyField('MenuItem', related_name='items_drinks')
+    menu_items_sides = models.ManyToManyField('MenuItem', related_name='items_sides')
+    
     
     
     class Meta:
-        ordering = ['menu_name']
+        ordering = ['-menu_active', 'menu_name']
 
     def __str__(self):
         return str(self.menu_name)

@@ -15,7 +15,6 @@ class MenuItemAdmin(admin.ModelAdmin):
 class MenuAdmin(admin.ModelAdmin):
     list_display = (
         'menu_name',
-        'get_items',
         'menu_active'
     )
     list_filter = ('menu_name',)
