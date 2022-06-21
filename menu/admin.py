@@ -14,8 +14,12 @@ class MenuItemAdmin(admin.ModelAdmin):
 @admin.register(Menu)
 class MenuAdmin(admin.ModelAdmin):
     list_display = (
+        
         'name',
-        'active'
+        'active',
+        'created_by',
+        'created_on',
+        'updated_on',
     )
     list_filter = ('name',)
     

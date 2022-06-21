@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -22,6 +23,9 @@ class MenuItem(models.Model):
     
 class Menu(models.Model):
     name = models.CharField(max_length=25)
+    created_by = models.ForeignKey(User, on_delete=models.CASCADE, related_name="created")
+    created_on = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
     active = models.BooleanField(default=False)
     starters = models.ManyToManyField('MenuItem', related_name='starters')
     mains = models.ManyToManyField('MenuItem', related_name='mains')

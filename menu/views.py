@@ -9,7 +9,7 @@ class MenuListView(generic.ListView):
     model = Menu
     template_name = 'menu/menus.html'
     def get_queryset(self):
-        return Menu.objects.filter(menu_active=True)
+        return Menu.objects.filter(active=True)
     
 class ManageMenusListView(generic.ListView):
     
@@ -23,6 +23,11 @@ class CreateMenuView(generic.CreateView):
     form_class = CreateMenuForm
     template_name = 'menu/create_menu.html'
     success_url = '/menu/menus'
+    
+    def form_valid(self, form):
+        form.instance.created_by = self.request.user
+        
+        return super(CreateMenuView, self).form_valid(form)
     
 class EditMenuView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
     """
