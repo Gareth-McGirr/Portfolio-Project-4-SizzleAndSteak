@@ -11,37 +11,37 @@ class CreateMenuForm(forms.ModelForm):
     
     class Meta:
         model = Menu
-        fields = ['menu_name', 'menu_active', 'menu_items_starters', 'menu_items_mains', 'menu_items_deserts', 'menu_items_drinks', 'menu_items_sides']
+        fields = ['name', 'active', 'starters', 'mains', 'deserts', 'drinks', 'sides']
         labels = {
-            'menu_name': 'Name',
-            'menu_active': 'Active',
-            'menu_items_starters': 'Starters',
-            'menu_items_mains': 'Mains',
-            'menu_items_deserts': 'Deserts',
-            'menu_items_drinks': 'Drinks',
-            'menu_items_sides': 'Sides'
+            'name': 'Name',
+            'active': 'Active',
+            'starters': 'Starters',
+            'mains': 'Mains',
+            'deserts': 'Deserts',
+            'drinks': 'Drinks',
+            'sides': 'Sides'
         }
         
     menu_name = forms.CharField()
     menu_active = forms.CheckboxInput()
     menu_items_starters = CustomMMCF(
-        queryset=MenuItem.objects.filter(menu_item_type='starter'),
+        queryset=MenuItem.objects.filter(type='starter'),
         widget=forms.CheckboxSelectMultiple()
     )
     menu_items_mains = CustomMMCF(
-        queryset=MenuItem.objects.filter(menu_item_type='main'),
+        queryset=MenuItem.objects.filter(type='main'),
         widget=forms.CheckboxSelectMultiple()
     )
     menu_items_deserts = CustomMMCF(
-        queryset=MenuItem.objects.filter(menu_item_type='desert'),
+        queryset=MenuItem.objects.filter(type='desert'),
         widget=forms.CheckboxSelectMultiple()
     )
     menu_items_drinks = CustomMMCF(
-        queryset=MenuItem.objects.filter(menu_item_type='drink'),
+        queryset=MenuItem.objects.filter(type='drink'),
         widget=forms.CheckboxSelectMultiple()
     )
     menu_items_sides = CustomMMCF(
-        queryset=MenuItem.objects.filter(menu_item_type='side'),
+        queryset=MenuItem.objects.filter(type='side'),
         widget=forms.CheckboxSelectMultiple()
     )
     

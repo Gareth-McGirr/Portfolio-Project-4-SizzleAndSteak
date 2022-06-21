@@ -6,15 +6,15 @@
     {% for menu in object_list %}
     -------------------------------------------------------------------
     <p>
-        <h2>{{ menu.menu_name }}</h2>
+        <h2>{{ menu.name }}</h2>
         <p>
             <h5>Starters</h5>
 
             <ul>
-                {% for item in menu.menu_items_starters.all %}
+                {% for item in menu.starters.all %}
                 <p>
-                    <li>{{ item.menu_item_name }}</li>
-                    <li>£{{ item.menu_item_price }}</li>
+                    <li>{{ item.name }}</li>
+                    <li>£{{ item.price }}</li>
                     {% if item.contains_nuts %}
                     <span>*Contains nuts*</span>
                     {% endif %}
@@ -31,10 +31,10 @@
         <p>
             <h5>Main Courses</h5>
             <ul>
-                {% for item in menu.menu_items_mains.all %}
+                {% for item in menu.mains.all %}
                 <p>
-                    <li>{{ item.menu_item_name }}</li>
-                    <li>£{{ item.menu_item_price }}</li>
+                    <li>{{ item.name }}</li>
+                    <li>£{{ item.price }}</li>
                     {% if item.contains_nuts %}
                     <span>*Contains nuts*</span>
                     {% endif %}
@@ -51,10 +51,10 @@
         <p>
             <h5>Deserts</h5>
             <ul>
-                {% for item in menu.menu_items_deserts.all %}
+                {% for item in menu.deserts.all %}
                 <p>
-                    <li>{{ item.menu_item_name }}</li>
-                    <li>£{{ item.menu_item_price }}</li>
+                    <li>{{ item.name }}</li>
+                    <li>£{{ item.price }}</li>
                     {% if item.contains_nuts %}
                     <span>*Contains nuts*</span>
                     {% endif %}
@@ -73,10 +73,10 @@
                 <p>
                     <h5>Sides</h5>
                     <ul>
-                        {% for item in menu.menu_items_sides.all %}
+                        {% for item in menu.sides.all %}
                         <p>
-                            <li>{{ item.menu_item_name }}</li>
-                            <li>£{{ item.menu_item_price }}</li>
+                            <li>{{ item.name }}</li>
+                            <li>£{{ item.price }}</li>
                             {% if item.contains_nuts %}
                             <span>*Contains nuts*</span>
                             {% endif %}
@@ -95,10 +95,10 @@
                 <p>
                     <h5>Drinks</h5>
                     <ul>
-                        {% for item in menu.menu_items_drinks.all %}
+                        {% for item in menu.drinks.all %}
                         <p>
-                            <li>{{ item.menu_item_name }}</li>
-                            <li>£{{ item.menu_item_price }}</li>
+                            <li>{{ item.name }}</li>
+                            <li>£{{ item.price }}</li>
                             {% if item.contains_nuts %}
                             <span>*Contains nuts*</span>
                             {% endif %}
