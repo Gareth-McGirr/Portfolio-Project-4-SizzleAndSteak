@@ -22,25 +22,25 @@ class CreateMenuForm(forms.ModelForm):
             'sides': 'Sides'
         }
         
-    menu_name = forms.CharField()
-    menu_active = forms.CheckboxInput()
-    menu_items_starters = CustomMMCF(
+    name = forms.CharField()
+    active = forms.CheckboxInput()
+    starters = CustomMMCF(
         queryset=MenuItem.objects.filter(type='starter'),
         widget=forms.CheckboxSelectMultiple()
     )
-    menu_items_mains = CustomMMCF(
+    mains = CustomMMCF(
         queryset=MenuItem.objects.filter(type='main'),
         widget=forms.CheckboxSelectMultiple()
     )
-    menu_items_deserts = CustomMMCF(
+    deserts = CustomMMCF(
         queryset=MenuItem.objects.filter(type='desert'),
         widget=forms.CheckboxSelectMultiple()
     )
-    menu_items_drinks = CustomMMCF(
+    drinks = CustomMMCF(
         queryset=MenuItem.objects.filter(type='drink'),
         widget=forms.CheckboxSelectMultiple()
     )
-    menu_items_sides = CustomMMCF(
+    sides = CustomMMCF(
         queryset=MenuItem.objects.filter(type='side'),
         widget=forms.CheckboxSelectMultiple()
     )
