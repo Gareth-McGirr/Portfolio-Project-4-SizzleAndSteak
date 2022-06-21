@@ -16,6 +16,43 @@ main {
     flex: 1 0 auto;
 }
 
+#id_starters, #id_mains, #id_deserts, #id_drinks, #id_sides  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+#id_starters div {
+    width: 20%;
+    margin: 3px;
+    background-color: darkgray;
+}
+
+#id_mains div {
+    width: 20%;
+    margin: 3px;
+    background-color: darkgray;
+}
+
+#id_deserts div {
+    width: 20%;
+    margin: 3px;
+    background-color: darkgray;
+}
+
+#id_drinks div {
+    width: 20%;
+    margin: 3px;
+    background-color: darkgray;
+}
+
+#id_sides div {
+    width: 20%;
+    margin: 3px;
+    background-color: darkgray;
+}
+
 footer {
     flex-shrink: 0;
     background-color: darkgray;
