@@ -16,6 +16,19 @@ main {
     flex: 1 0 auto;
 }
 
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 500px;
+    width: 600px;
+}
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 500px;
+    width: 600px;
+}
+
 #id_starters, #id_mains, #id_deserts, #id_drinks, #id_sides  {
     display: flex;
     flex-direction: row;

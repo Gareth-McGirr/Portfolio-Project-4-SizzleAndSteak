@@ -2,9 +2,68 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <span><h1>This is the home page</h1></span>
+<div class="container-fluid d-flex justify-content-center">
+    <div class="d-grid gap-2 col-6 .mx-auto">
+        <button onclick="document.location.href='{% url 'createbooking' %}';" class="btn btn-dark" type="button">Make a
+            Booking</button>
+        <button onclick="document.location.href='{% url 'menus' %}';" class="btn btn-dark" type="button">View
+            Menus</button>
+    </div>
 
+</div>
+
+
+<div class="container-wrapper">
+    <div class="content-wrapper main-column">
+        <div class="text-area content">
+            <h1>WELCOME</h1>
+            <div>
+                <p>
+                    With arguably the best views in the area, Sizzle and Steak certainly offers food and
+                    drink with a view! With tables gazing out to the Atlantic Ocean and beyond, it offers the perfect
+                    place to eat, drink and relax serving everything from morning coffees to classic cocktails and a
+                    variety of mouth-watering dishes for lunch and dinner.
+                </p>
+                <p>
+                    Our menus embrace the essence of our locality using the finest, locally sourced ingredients such as
+                    locally caught seafood fresh from the pier. We are passionate about food, service and delivering a
+                    dining experience that is relaxed and very much rooted in our location on the stunning Causeway
+                    Coast. So whether it's a celebratory evening with friends or a romantic table for two against the
+                    backdrop of an Atlantic sunset, we serve the best of the bay in unforgettable surroundings.
+                </p>
+                <p>&nbsp;</p>
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="600" height="500" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=torr%20head&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                        </iframe>
+                            <a href="https://putlocker-is.org">putlocker</a><br>
+                            <a href="https://www.embedgooglemap.net"></a>
+                    </div>
+                </div>
+                <p><strong>Lunch Opening Times</strong></p>
+                <ul>
+                    <li>Monday to Saturday 12pm – 3.45pm</li>
+                    <li>Sunday 12pm - 4pm</li>
+                </ul>
+                <p><strong>Dining Opening Times</strong></p>
+                <ul>
+                    <li>Monday 4pm - 10pm</li>
+                    <li>Tuesday 4pm - 10pm</li>
+                    <li>Wednesday 4pm - 10pm</li>
+                    <li>Thursday 4pm - 10pm</li>
+                    <li>Friday 4pm - 10pm</li>
+                    <li>Saturday 4pm - 10pm</li>
+                    <li>Sunday 4pm - 10pm</li>
+                </ul>
+                <p>&nbsp;</p>
+
+                <p>For reservations call (555 555 55555) EXT3.&nbsp;</p>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 {%endblock%}
