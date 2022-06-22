@@ -11,19 +11,30 @@ class MenuListView(generic.ListView):
     def get_queryset(self):
         return Menu.objects.filter(active=True)
     
-class ManageMenusListView(generic.ListView):
+class ManageMenusListView(LoginRequiredMixin, UserPassesTestMixin, generic.ListView):
     
     model = Menu
     template_name = 'menu/managemenus.html'
     def get_queryset(self):
         return Menu.objects.all()
     
-class CreateMenuView(generic.CreateView):
+    def test_func(self):
+        if self.request.user.is_staff:
+            return True
+        else:
+            return False
+    
+class CreateMenuView(LoginRequiredMixin, UserPassesTestMixin, generic.CreateView):
     model = Menu
     form_class = CreateMenuForm
     template_name = 'menu/create_menu.html'
     success_url = '/menu/menus'
     
+    def test_func(self):
+        if self.request.user.is_staff:
+            return True
+        else:
+            return False
     def form_valid(self, form):
         form.instance.created_by = self.request.user
         
