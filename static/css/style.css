@@ -70,3 +70,47 @@ footer {
     flex-shrink: 0;
     background-color: darkgray;
 }
+
+/* Menu page */
+
+#menus {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 3px solid #ddc439;
+}
+
+#menus h3 {
+    color: #ddc439;
+}
+
+#menus span {
+    display: block;
+}
+
+.slider {
+    color: #ddc439;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.slider:hover {
+    color: silver;
+}
+
+.slider-forward {
+    right: 10px;
+}
+
+.slider-back {
+    left: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.sm-text {
+    font-size: 12px;
+    font-style: italic;
+}

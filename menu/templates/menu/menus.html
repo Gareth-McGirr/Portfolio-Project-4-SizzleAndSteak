@@ -2,120 +2,148 @@
 
 {% block content %}
 
-<div class="container-fluid">
+<div id="menus" class="mt-3 mb-3 d-flex flex-row align-items-center justify-content-between shadow">
+    <div>
+        <a role="button" class="slider slider-back" aria-label="Previous Menu" onclick="back()">
+            <i class="fa-solid fa-chevron-left"></i>
+        </a>
+    </div>
     {% for menu in object_list %}
-    -------------------------------------------------------------------
-    <p>
+    {% if forloop.counter == 1 %}
+    <div id="menu-{{forloop.counter}}" class="col-10 text-center">
+    {% else %}
+    <div id="menu-{{forloop.counter}}" class="hide col-10 text-center">
+    {% endif %}
         <h2>{{ menu.name }}</h2>
-        <p>
-            <h5>Starters</h5>
+        <img src="{{ MEDIA_URL }}/images/divider.png" class="w-75">
 
-            <ul>
-                {% for item in menu.starters.all %}
-                <p>
-                    <li>{{ item.name }}</li>
-                    <li>£{{ item.price }}</li>
-                    {% if item.contains_nuts %}
-                    <span>*Contains nuts*</span>
+        <div class="starters">
+            <h3>Starters</h5>
+            {% for item in menu.starters.all %}
+                <span>{{ item.name }}<span>
+                <span>£{{ item.price }}</span>
+                {% if item.contains_nuts %}
+                <p class="sm-text">*Contains nuts*
                     {% endif %}
                     {% if item.vegetarian %}
-                    <span>*Vegetarian*</span>
+                    *Vegetarian*
                     {% endif %}
                     {% if item.vegan %}
-                    <span>*Vegan*</span>
-                    {% endif %}
+                    *Vegan*
                 </p>
-                {% endfor %}
-            </ul>
-        </p>
-        <p>
-            <h5>Main Courses</h5>
-            <ul>
-                {% for item in menu.mains.all %}
-                <p>
-                    <li>{{ item.name }}</li>
-                    <li>£{{ item.price }}</li>
-                    {% if item.contains_nuts %}
-                    <span>*Contains nuts*</span>
-                    {% endif %}
-                    {% if item.vegetarian %}
-                    <span>*Vegetarian*</span>
-                    {% endif %}
-                    {% if item.vegan %}
-                    <span>*Vegan*</span>
-                    {% endif %}
-                </p>
-                {% endfor %}
-            </ul>
-        </p>
-        <p>
-            <h5>Deserts</h5>
-            <ul>
-                {% for item in menu.deserts.all %}
-                <p>
-                    <li>{{ item.name }}</li>
-                    <li>£{{ item.price }}</li>
-                    {% if item.contains_nuts %}
-                    <span>*Contains nuts*</span>
-                    {% endif %}
-                    {% if item.vegetarian %}
-                    <span>*Vegetarian*</span>
-                    {% endif %}
-                    {% if item.vegan %}
-                    <span>*Vegan*</span>
-                    {% endif %}
-                </p>
-                {% endfor %}
-            </ul>
-        </p>
-        <div>
-            <div>
-                <p>
-                    <h5>Sides</h5>
-                    <ul>
-                        {% for item in menu.sides.all %}
-                        <p>
-                            <li>{{ item.name }}</li>
-                            <li>£{{ item.price }}</li>
-                            {% if item.contains_nuts %}
-                            <span>*Contains nuts*</span>
-                            {% endif %}
-                            {% if item.vegetarian %}
-                            <span>*Vegetarian*</span>
-                            {% endif %}
-                            {% if item.vegan %}
-                            <span>*Vegan*</span>
-                            {% endif %}
-                        </p>
-                        {% endfor %}
-                    </ul>
-                </p>
-            </div>
-            <div>
-                <p>
-                    <h5>Drinks</h5>
-                    <ul>
-                        {% for item in menu.drinks.all %}
-                        <p>
-                            <li>{{ item.name }}</li>
-                            <li>£{{ item.price }}</li>
-                            {% if item.contains_nuts %}
-                            <span>*Contains nuts*</span>
-                            {% endif %}
-                            {% if item.vegetarian %}
-                            <span>*Vegetarian*</span>
-                            {% endif %}
-                            {% if item.vegan %}
-                            <span>*Vegan*</span>
-                            {% endif %}
-                        </p>
-                        {% endfor %}
-                    </ul>
-                </p>
-            </div>
+                {% endif %}
+            {% endfor %}
         </div>
-        -------------------------------------------------------------------
-        {% endfor %}
+        <div class="mains mt-2">
+            <h3>Main Courses</h3>
+            {% for item in menu.mains.all %}
+                <span>{{ item.name }}</span>
+                <span>£{{ item.price }}<span>
+                {% if item.contains_nuts %}
+                <p class="sm-text">*Contains nuts*
+                    {% endif %}
+                    {% if item.vegetarian %}
+                    *Vegetarian*
+                    {% endif %}
+                    {% if item.vegan %}
+                    *Vegan*
+                </p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="desserts mt-2">
+            <h3>Desserts</h3>
+            {% for item in menu.deserts.all %}
+                <span>{{ item.name }}</span>
+                <span>£{{ item.price }}</span>
+                {% if item.contains_nuts %}
+                    <p class="sm-text">* Contains nuts
+                {% endif %}
+                {% if item.vegetarian %}
+                    * Vegetarian
+                {% endif %}
+                {% if item.vegan %}
+                    * Vegan
+                </p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="sides mt-2">
+            <h3>Sides</h3>
+            {% for item in menu.sides.all %}
+                <span>{{ item.name }}</span>
+                <span>£{{ item.price }}</span>
+                {% if item.contains_nuts %}
+                <p class="sm-text">*Contains nuts*
+                    {% endif %}
+                    {% if item.vegetarian %}
+                    *Vegetarian*
+                    {% endif %}
+                    {% if item.vegan %}
+                    *Vegan*
+                </p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="drinks mt-2">
+            <h3>Drinks</h3>
+            {% for item in menu.drinks.all %}
+                <span>{{ item.name }}</span>
+                <span>£{{ item.price }}</span>
+                {% if item.contains_nuts %}
+                <p class="sm-text">*Contains nuts*
+                    {% endif %}
+                    {% if item.vegetarian %}
+                    *Vegetarian*
+                    {% endif %}
+                    {% if item.vegan %}
+                    *Vegan*
+                </p>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <img src="{{ MEDIA_URL }}/images/divider.png" class="w-75">
+    </div>
+    {% endfor %}
+    <div>
+        <a role="button" class="slider slider-forward" aria-label="Next Menu" onclick="forward()">
+            <i class="fa-solid fa-chevron-right"></i>
+        </a>
+    </div>
 </div>
 
 {%endblock%}
+
+{% block extra_js %}
+{{ block.super }}
+<script>
+    menus = document.querySelectorAll('[id^="menu-"]');
+    currentMenu = 0;
+    function forward() {
+        if(currentMenu < menus.length - 1) {
+            menus[currentMenu].classList.add('hide');
+            currentMenu++;
+            menus[currentMenu].classList.remove('hide');
+        }
+        else {
+            menus[currentMenu].classList.add('hide');
+            currentMenu = 0;
+            menus[currentMenu].classList.remove('hide');
+        }
+    }
+    
+    function back(loop) {
+        if(currentMenu > 0) {
+            menus[currentMenu].classList.add('hide');
+            currentMenu--;
+            menus[currentMenu].classList.remove('hide');
+        }
+        else {
+            menus[currentMenu].classList.add('hide');
+            currentMenu = menus.length - 1;
+            menus[currentMenu].classList.remove('hide');
+        }
+    }
+    
+</script>
+{% endblock %}
