@@ -1,27 +1,29 @@
-from email.policy import default
 from django import forms
 from .models import MenuItem, Menu
 
+
 class CustomMMCF(forms.ModelMultipleChoiceField):
-    
+    """
+    Get custom menu item name labels for checkboxes
+    """
     def label_from_instance(self, menuitem):
+        """
+        Returns labels
+        """
         return  str(menuitem)
-    
+
+
 class CreateMenuForm(forms.ModelForm):
-    
+    """
+    Form to edit and delete menus
+    """
     class Meta:
+        """
+        Define model, form fields and label
+        """
         model = Menu
         fields = ['name', 'active', 'starters', 'mains', 'deserts', 'drinks', 'sides']
-        labels = {
-            'name': 'Name',
-            'active': 'Active',
-            'starters': 'Starters',
-            'mains': 'Mains',
-            'deserts': 'Deserts',
-            'drinks': 'Drinks',
-            'sides': 'Sides'
-        }
-        
+
     name = forms.CharField()
     active = forms.CheckboxInput()
     starters = CustomMMCF(
@@ -44,10 +46,3 @@ class CreateMenuForm(forms.ModelForm):
         queryset=MenuItem.objects.filter(type='side'),
         widget=forms.CheckboxSelectMultiple()
     )
-    
-    
-   
-    
-   
-    
-    
