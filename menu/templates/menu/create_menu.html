@@ -5,10 +5,10 @@
 <div class="m-3">
     <form method="POST" action="{% url 'createmenu' %}" class="form mb-2 p-2" enctype="multipart/form-data">
         <h1 class="text-center">Create Menu</h1>
-        {% csrf_token %}
-        {{ form.as_p }}
-        {{ form.media }}
-        <button type="submit" class="btn green-btn">Create</button>
+            {% csrf_token %}
+            {{ form|crispy }}
+            {{ form.media }}
+            <button type="submit" class="btn green-btn">Create</button>
     </form>
 </div>
 
