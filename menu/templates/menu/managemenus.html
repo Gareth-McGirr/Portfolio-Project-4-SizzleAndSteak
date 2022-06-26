@@ -6,33 +6,41 @@
     <h2>Menu List</h2>
 
     <table class="table">
-        <tr>
-            <th>Name</th>
-            <th>Active</th>
-            {% for menu in object_list %}
-        <tr>
-            <td>
-                {{ menu.menu_name }}
-            </td>
-            <td>
-                {% for item in menu.menu_items.all %}
-                    {{ item }} ,
-                {% endfor %}
-            </td>
-            <td>
-                {% if menu.menu_active %}
-                Yes
-                {% else %}
-                No
-                {% endif %}
-            </td>
-            <td>
-                <a href="{% url 'editmenu' menu.id %}" class="btn m-2">Edit</a>
-            </td>
-            <td>
-                <a href="#" class="btn m-2">Delete</a>
-            </td>
-        </tr>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Created By</th>
+                <th>Last Updated</th>
+                <th>Active</th>
+            </tr>
+        </thead>
+        {% for menu in object_list %}
+        <tbody>
+            <tr>
+                <td>
+                    {{ menu.name }}
+                </td>
+                <td>
+                    {{ menu.created_by }}
+                </td>
+                <td>
+                    {{ menu.updated_on }}
+                </td>
+                <td>
+                    {% if menu.active %}
+                    Yes
+                    {% else %}
+                    No
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{% url 'editmenu' menu.id %}" class="btn btn-dark m-2">Edit</a>
+                </td>
+                <td>
+                    <a href="#" class="btn btn-dark m-2">Delete</a>
+                </td>
+            </tr>
+        </tbody>
         {% endfor %}
     </table>
 </div>
