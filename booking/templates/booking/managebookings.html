@@ -9,7 +9,23 @@
 {% block content %}
 
 <div class="container-fluid">
-    <h2>Bookings List</h2>
+    <div>
+        <div>
+            <h2>Bookings List</h2>
+        </div>
+
+        {% if request.user.is_staff %}
+        <div>
+            <form method='GET' class="mb-2">
+                <input type='text' name='q' value='{{ request.GET.q }}' autocomplete="off" aria-label="Search Booking by reference"
+                    placeholder="Search Booking Ref">
+                <button class="btn p-0" type='submit' value="Search Booking by ref">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+        {% endif %}
+    <div>
 
     <table class="table">
         <thead>
