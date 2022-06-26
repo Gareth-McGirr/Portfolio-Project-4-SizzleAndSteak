@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'menu/css/menus.css' %}">
+{% endblock %}
 
 {% block content %}
 
