@@ -14,9 +14,9 @@ div.form-check {
     padding-left: 5px;
 }
 
-footer {
-    flex-shrink: 0;
-    background-color: darkgray;
+.form-check-input:checked {
+    background: #d4c248;
+    border-color: #d4c248;
 }
 
 /* Menu page */
@@ -35,6 +35,8 @@ footer {
 #menus span {
     display: block;
 }
+
+/* Menu Slider View */
 
 .slider {
     color: #ddc439;

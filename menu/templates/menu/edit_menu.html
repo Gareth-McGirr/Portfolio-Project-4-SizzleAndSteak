@@ -13,9 +13,9 @@
     <form method="POST" action="{% url 'editmenu' menu.id %}" class="form mb-2 p-2" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.id }}
-        {{ form.as_p }}
+        {{ form|crispy }}
         {{ form.media }}
-        <button type="submit" class="btn green-btn">Save</button>
+        <button type="submit" class="btn btn-dark">Save</button>
     </form>
 </div>
 
