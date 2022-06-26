@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'booking/css/booking.css' %}">
+{% endblock %}
 
 {% block content %}
 
@@ -6,49 +12,53 @@
     <h2>Bookings List</h2>
 
     <table class="table">
-        <tr>
-            <th>Booking Reference</th>
-            <th>Customer</th>
-            <th>Date</th>
-            <th>Time Slot</th>
-            <th>No. Guests</th>
-            {% if user.is_staff %}
-            <th>Table:</th>
-            <th>Capacity:</th>
-            {% endif %}
-        </tr>
+        <thead>
+            <tr>
+                <th>Booking Reference</th>
+                <th>Customer</th>
+                <th>Date</th>
+                <th>Time Slot</th>
+                <th>No. Guests</th>
+                {% if user.is_staff %}
+                <th>Table:</th>
+                <th>Capacity:</th>
+                {% endif %}
+            </tr>
+        </thead>
         {% for booking in object_list %}
-        <tr>
-            <td>
-                {{ booking.pk }}
-            </td>
-            <td>
-                {{ booking.customer }}
-            </td>
-            <td>
-                {{ booking.booking_date }}
-            </td>
-            <td>
-                {{ booking.get_booking_time_display }}
-            </td>
-            <td>
-                {{ booking.number_of_guests }}
-            </td>
-            {% if user.is_staff %}
-            <td>
-                {{ booking.booked_table }}
-            </td>
-            <td>
-                {{ booking.booked_table.capacity }}
-            </td>
-            {% endif %}
-            <td>
-                <a href="{% url 'editbooking' booking.id %}" class="btn m-2">Edit</a>
-            </td>
-            <td>
-                <a href="{% url 'delete_booking' booking.id %}" class="btn m-2">Delete</a>
-            </td>
-        </tr>
+        <tbody>
+            <tr>
+                <td>
+                    {{ booking.pk }}
+                </td>
+                <td>
+                    {{ booking.customer }}
+                </td>
+                <td>
+                    {{ booking.booking_date }}
+                </td>
+                <td>
+                    {{ booking.get_booking_time_display }}
+                </td>
+                <td>
+                    {{ booking.number_of_guests }}
+                </td>
+                {% if user.is_staff %}
+                <td>
+                    {{ booking.booked_table }}
+                </td>
+                <td>
+                    {{ booking.booked_table.capacity }}
+                </td>
+                {% endif %}
+                <td>
+                    <a href="{% url 'editbooking' booking.id %}" class="btn btn-dark m-2">Edit</a>
+                </td>
+                <td>
+                    <a href="{% url 'delete_booking' booking.id %}" class="btn  btn-dark m-2">Delete</a>
+                </td>
+            </tr>
+        </tbody>
         {% endfor %}
     </table>
 </div>
