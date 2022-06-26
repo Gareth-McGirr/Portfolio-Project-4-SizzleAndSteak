@@ -1,16 +1,30 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'booking/css/datepicker.css' %}">
+{% endblock %}
 
 {% block content %}
 
-<h1 class="text-center">Edit Booking</h1>
 <div class="m-3">
     <form method="POST" action="{% url 'editbooking' booking.id %}" class="form mb-2 p-2" enctype="multipart/form-data">
+        <h1 class="text-center">Edit Booking</h1>
         {% csrf_token %}
         {{ form.id }}
-        {{ form.as_p }}
+        {{ form|crispy }}
         {{ form.media }}
         <button type="submit" class="btn green-btn">Create</button>
     </form>
 </div>
 
-{%endblock%}
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script>
+    $('.datepicker').datepicker();
+</script>
+{% endblock %}
