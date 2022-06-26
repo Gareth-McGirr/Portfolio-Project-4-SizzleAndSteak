@@ -1,0 +1,48 @@
+/* Date picker */
+#ui-datepicker-div {
+    background-color: black;
+    width: 15em;
+}
+
+.ui-datepicker-header a {
+    color: #d4c248;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.ui-datepicker-header a:hover {
+    color: #d4c248;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ui-datepicker-calendar {
+    color: white;
+}
+
+.ui-datepicker-month {
+    color: white;
+}
+
+.ui-datepicker-year {
+    color: white;
+}
+
+a.ui-datepicker-next {
+    float: right;
+}
+
+.ui-datepicker-today a {
+    background-color: #d4c248;
+    color: white;
+}
+
+td a {
+    color: white;
+    text-decoration: none;
+}
+
+td a:hover {
+    background-color: #d4c248;
+    text-decoration: none;
+}
