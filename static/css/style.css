@@ -16,8 +16,25 @@ main {
     flex: 1 0 auto;
 }
 
-.form_style {
-    /* background-color: grey; */
+/* Zebra striping */
+tr:nth-of-type(odd) {
+    background: #eee;
+}
+
+td,
+th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: start;
+    color: black;
+    vertical-align: middle;
+}
+
+td a {
+    width: 150px;
+}
+
+.form_style, .button_style {
     background-color: black; 
     color: white;
     border-radius: 10px;
@@ -36,4 +53,15 @@ main {
     background: none !important;
     height: 500px;
     width: 600px;
+}
+
+@media screen and (min-width: 1024px) {
+    div.form-check {
+        width: 33%;
+    }
+
+    td,
+    th {
+    text-align: center;
+    }
 }

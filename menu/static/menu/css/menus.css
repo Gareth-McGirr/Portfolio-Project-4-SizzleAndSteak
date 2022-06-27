@@ -70,33 +70,6 @@ Generic Styling, for Desktops/Laptops
 Code gotten from CSS Tricks
 https://css-tricks.com/responsive-data-tables/
 */
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-/* Zebra striping */
-tr:nth-of-type(odd) {
-    background: #eee;
-}
-
-th {
-    background: #333;
-    color: white;
-    font-weight: bold;
-}
-
-td,
-th {
-    padding: 6px;
-    border: 1px solid #ccc;
-    text-align: left;
-    color: black;
-}
-
-td a {
-    width: 150px;
-}
 
 /* Media queries */
 
@@ -163,10 +136,4 @@ only screen and (max-width: 767px),
 	td:nth-of-type(2):before { content: "Created By"; }
 	td:nth-of-type(3):before { content: "Last Updated"; }
 	td:nth-of-type(4):before { content: "Active"; }
-}
-
-@media screen and (min-width: 1000px) {
-    div.form-check {
-        width: 33%;
-    }
 }
