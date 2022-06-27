@@ -1,3 +1,18 @@
+.search-btn {
+	background-color: black;
+	height: 30px;
+	width: 35px;
+	margin-bottom: 2px;
+}
+
+.search-btn i {
+	color: white;
+}
+
+.search-btn i:hover {
+	color: #ddc439;
+}
+
 /* 
 Generic Styling, for Desktops/Laptops
 Code gotten from CSS Tricks
