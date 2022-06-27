@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{{ form.media }}
+
+{% block content %}
+<h1 class="text-center">Confirm Menu Deletion</h1>
+<div class="d-flex justify-content-center pt-3">
+    <form method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete menu: "{{ object.pk }}"?</p>
+        <input type="submit" value="Confirm" class="btn btn-dark">
+    </form>
+</div>
+{% endblock %}
