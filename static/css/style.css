@@ -1,3 +1,5 @@
+/* Generic styles */
+
 html,
 body {
     height: 100%;
@@ -16,6 +18,17 @@ main {
     flex: 1 0 auto;
 }
 
+/* Navbar */
+
+nav.navbar {
+    vertical-align: middle;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: white;
+}
+
+/* Reusable table styling */
 /* Zebra striping */
 tr:nth-of-type(odd) {
     background: #eee;
@@ -34,6 +47,8 @@ td a {
     width: 150px;
 }
 
+/* Reusable form styling */
+
 .form-style, .button-style {
     background-color: black; 
     color: white;
@@ -44,6 +59,8 @@ td a {
 .button-style:hover {
     color: #ddc439;
 }
+
+/* Home page */
 
 .mapouter {
     display: flex; 
@@ -66,6 +83,7 @@ td a {
     list-style: none;
 }
 
+/* Media queries */
 @media screen and (min-width: 800px) {
     .mapouter {
         flex-direction: row;
