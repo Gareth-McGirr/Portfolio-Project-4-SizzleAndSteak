@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = DEVELOPMENT
 
-ALLOWED_HOSTS = ['127.0.0.1', 'https://sizzle-and-steak.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'sizzle-and-steak.herokuapp.com']
 
 
 # Application definition
