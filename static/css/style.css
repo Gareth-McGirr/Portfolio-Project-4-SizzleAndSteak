@@ -3,6 +3,7 @@
 html,
 body {
     height: 100%;
+    color: #fff;
 }
 
 header {
@@ -16,6 +17,7 @@ body {
 
 main {
     flex: 1 0 auto;
+    background-color: #0000009e;
 }
 
 /* Navbar */
@@ -26,6 +28,11 @@ nav.navbar {
 
 .navbar-dark .navbar-nav .nav-link {
     color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover, .dropdown-item:hover {
+    color: #ddc439;
+    background-color: black;
 }
 
 /* Footer */
@@ -87,11 +94,14 @@ td a {
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
+    display: flex;
+    align-items: center;
 }
 
 .gmap_canvas iframe {
     min-height: 350px;
     width: 100%;
+    border-radius: 10px;
 }
 
 .opening ul {
