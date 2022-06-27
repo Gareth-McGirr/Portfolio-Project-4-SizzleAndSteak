@@ -51,7 +51,7 @@ class BookingsList(LoginRequiredMixin, generic.ListView):
         query = self.request.GET.get('q')
         if query:
             return Booking.objects.filter(id=query)
-        elif self.request.user.is_staff:
+        if self.request.user.is_staff:
             return Booking.objects.all()
         else:
             return Booking.objects.filter(customer=self.request.user)
@@ -64,17 +64,23 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
     """
     form_class = BookingForm
     template_name = 'booking/edit_booking.html'
-    success_url = "/booking/managebookings/"
+    success_url = "/booking/managebookings"
     model = Booking
 
     def test_func(self):
-        return self.request.user.is_staff
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().customer
 
 
 class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
-    """ A view to delete an event """
+    """ A view to delete a booking """
     model = Booking
     success_url = "/booking/managebookings"
 
     def test_func(self):
-        return self.request.user.is_staff
+        if self.request.user.is_staff:
+            return True
+        else:
+            return self.request.user == self.get_object().customer
