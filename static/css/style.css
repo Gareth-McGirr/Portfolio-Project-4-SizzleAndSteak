@@ -82,6 +82,16 @@ td a {
     color: #ddc439;
 }
 
+/* All auth pages */
+
+.login-a {
+    color: #ddc439;
+}
+
+.allauth-form {
+    width: 100%;
+}
+
 /* Home page */
 
 .mapouter {
@@ -121,6 +131,10 @@ td a {
 
     .opening {
         width: 40%;
+    }
+
+    .allauth-form {
+        width: 50%;
     }
 }
 
