@@ -20,7 +20,7 @@
         </form>
     {% endif %}
 
-    <div class="form_style">
+    <div class="form-style">
         <h1 class="text-center">Bookings List</h2>
         <table class="table table-striped table-hover">
             <thead>
@@ -65,10 +65,10 @@
                     </td>
                     {% endif %}
                     <td>
-                        <a href="{% url 'editbooking' booking.id %}" class="btn button_style m-2">Edit</a>
+                        <a href="{% url 'editbooking' booking.id %}" class="btn button-style m-2">Edit</a>
                     </td>
                     <td>
-                        <a href="{% url 'delete_booking' booking.id %}" class="btn button_style m-2">Delete</a>
+                        <a href="{% url 'delete_booking' booking.id %}" class="btn button-style m-2">Delete</a>
                     </td>
                 </tr>
             </tbody>

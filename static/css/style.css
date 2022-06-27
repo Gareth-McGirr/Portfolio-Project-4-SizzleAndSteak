@@ -34,25 +34,51 @@ td a {
     width: 150px;
 }
 
-.form_style, .button_style {
+.form-style, .button-style {
     background-color: black; 
     color: white;
     border-radius: 10px;
     border: 3px solid #ddc439;
 }
 
+.button-style:hover {
+    color: #ddc439;
+}
+
 .mapouter {
-    position: relative;
-    text-align: right;
-    height: 500px;
-    width: 600px;
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    height: auto;
 }
 
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
-    height: 500px;
-    width: 600px;
+}
+
+.gmap_canvas iframe {
+    min-height: 350px;
+    width: 100%;
+}
+
+.opening ul {
+    list-style: none;
+}
+
+@media screen and (min-width: 800px) {
+    .mapouter {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .gmap_canvas {
+        width: 55%;
+    }
+
+    .opening {
+        width: 40%;
+    }
 }
 
 @media screen and (min-width: 1024px) {

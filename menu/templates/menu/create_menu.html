@@ -8,12 +8,12 @@
 {% block content %}
 
 <div class="m-3">
-    <form method="POST" action="{% url 'createmenu' %}" class="form mb-2 p-2 form_style" enctype="multipart/form-data">
+    <form method="POST" action="{% url 'createmenu' %}" class="form mb-2 p-2 form-style" enctype="multipart/form-data">
         <h1 class="text-center">Create Menu</h1>
             {% csrf_token %}
             {{ form|crispy }}
             {{ form.media }}
-            <button type="submit" class="btn button_style">Create</button>
+            <button type="submit" class="btn button-style">Create</button>
     </form>
 </div>
 

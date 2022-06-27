@@ -2,21 +2,11 @@
 
 {% block content %}
 
-<div class="container-fluid d-flex justify-content-center">
-    <div class="d-grid gap-2 col-6 .mx-auto">
-        <button onclick="document.location.href='{% url 'createbooking' %}';" class="btn btn-dark" type="button">Make a
-            Booking</button>
-        <button onclick="document.location.href='{% url 'menus' %}';" class="btn btn-dark" type="button">View
-            Menus</button>
-    </div>
-
-</div>
-
-
 <div class="container-wrapper">
     <div class="content-wrapper main-column">
         <div class="text-area content">
-            <h1>WELCOME</h1>
+            <!-- Title and about us sections -->
+            <h1 class="text-center">WELCOME</h1>
             <div>
                 <p>
                     With arguably the best views in the area, Sizzle and Steak certainly offers food and
@@ -31,35 +21,44 @@
                     Coast. So whether it's a celebratory evening with friends or a romantic table for two against the
                     backdrop of an Atlantic sunset, we serve the best of the bay in unforgettable surroundings.
                 </p>
-                <p>&nbsp;</p>
+
+                <!-- Booking and menu buttons -->
+                <div class="d-grid gap-2 col-6 mb-3 mx-auto">
+                    <button onclick="document.location.href='{% url 'createbooking' %}';" class="btn button-style" type="button">Make a
+                        Booking</button>
+                    <button onclick="document.location.href='{% url 'menus' %}';" class="btn button-style" type="button">View
+                        Menus</button>
+                </div>
+
+                <h2 class="text-center">Find Us</h2>
+                <!-- Map -->
                 <div class="mapouter">
                     <div class="gmap_canvas">
-                        <iframe width="600" height="500" id="gmap_canvas"
+                        <iframe id="gmap_canvas"
                             src="https://maps.google.com/maps?q=torr%20head&t=&z=13&ie=UTF8&iwloc=&output=embed"
                             frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
                         </iframe>
-                            <a href="https://putlocker-is.org">putlocker</a><br>
-                            <a href="https://www.embedgooglemap.net"></a>
+                    </div>
+                    <!-- Opening hours -->
+                    <div class="opening text-center form-style">
+                        <p><strong>Lunch Opening Times</strong></p>
+                        <ul>
+                            <li>Monday to Saturday 12pm – 3.45pm</li>
+                            <li>Sunday 12pm - 4pm</li>
+                        </ul>
+                        <p><strong>Dining Opening Times</strong></p>
+                        <ul>
+                            <li>Monday 4pm - 10pm</li>
+                            <li>Tuesday 4pm - 10pm</li>
+                            <li>Wednesday 4pm - 10pm</li>
+                            <li>Thursday 4pm - 10pm</li>
+                            <li>Friday 4pm - 10pm</li>
+                            <li>Saturday 4pm - 10pm</li>
+                            <li>Sunday 4pm - 10pm</li>
+                        </ul>
                     </div>
                 </div>
-                <p><strong>Lunch Opening Times</strong></p>
-                <ul>
-                    <li>Monday to Saturday 12pm – 3.45pm</li>
-                    <li>Sunday 12pm - 4pm</li>
-                </ul>
-                <p><strong>Dining Opening Times</strong></p>
-                <ul>
-                    <li>Monday 4pm - 10pm</li>
-                    <li>Tuesday 4pm - 10pm</li>
-                    <li>Wednesday 4pm - 10pm</li>
-                    <li>Thursday 4pm - 10pm</li>
-                    <li>Friday 4pm - 10pm</li>
-                    <li>Saturday 4pm - 10pm</li>
-                    <li>Sunday 4pm - 10pm</li>
-                </ul>
-                <p>&nbsp;</p>
-
-                <p>For reservations call (555 555 55555) EXT3.&nbsp;</p>
+                <p class="text-center">For reservations call (555 555 55555) EXT3.&nbsp;</p>
             </div>
 
         </div>

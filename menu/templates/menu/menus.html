@@ -21,7 +21,7 @@
     <div id="menu-{{forloop.counter}}" class="hide col-10 text-center">
     {% endif %}
         <h2>{{ menu.name }}</h2>
-        <img src="{{ MEDIA_URL }}/images/divider.png" class="w-75">
+        <img src="{% static 'menu/images/divider.png' %}" class="w-75" alt="Top of the menu swirl image divider">
 
         <div class="starters">
             <h3>Starters</h5>
@@ -108,7 +108,7 @@
                 {% endif %}
             {% endfor %}
         </div>
-        <img src="{{ MEDIA_URL }}/images/divider.png" class="w-75">
+        <img src="{% static 'menu/images/divider.png' %}" class="w-75" alt="Bottom of the menu swirl image divider">
     </div>
     {% endfor %}
     <div>
