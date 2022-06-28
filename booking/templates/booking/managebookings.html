@@ -8,10 +8,10 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container m-3">
 
     {% if request.user.is_staff %}
-        <form method='GET' class="mb-3 mt-3">
+        <form method='GET' class="mb-3">
             <input type='text' name='q' value='{{ request.GET.q }}' autocomplete="off" aria-label="Search Booking by reference"
                 placeholder="Search Booking Ref">
             <button class="btn p-0 search-btn" type='submit' value="Search Booking by ref">
