@@ -1,9 +1,8 @@
-from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.views import generic
+from django.contrib import messages
 from .models import Booking, Table
 from .forms import BookingForm
-
-
 
 
 class CreateBookingView(LoginRequiredMixin, generic.CreateView):
@@ -38,6 +37,12 @@ class CreateBookingView(LoginRequiredMixin, generic.CreateView):
             if table.capacity < lowest_capacity_table.capacity:
                 lowest_capacity_table = table
         form.instance.booked_table = lowest_capacity_table
+
+        messages.success(
+            self.request,
+            f'Booking confirmed for {date} at {time}'
+        )
+
         return super(CreateBookingView, self).form_valid(form)
 
 
@@ -91,6 +96,12 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
                 if table.capacity < lowest_capacity_table.capacity:
                     lowest_capacity_table = table
             form.instance.booked_table = lowest_capacity_table
+
+        messages.success(
+            self.request,
+            f'Successfully updated booking: {self.kwargs["pk"]}'
+        )
+
         return super(EditBookingView, self).form_valid(form)
 
     def test_func(self):

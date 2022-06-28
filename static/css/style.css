@@ -3,7 +3,7 @@
 html,
 body {
     height: 100%;
-    color: #fff;
+    color: black;
 }
 
 header {
@@ -17,7 +17,7 @@ body {
 
 main {
     flex: 1 0 auto;
-    background-color: #0000009e;
+    background-color: #8f773c9e;
 }
 
 /* Navbar */
@@ -116,6 +116,23 @@ td a {
 
 .opening ul {
     list-style: none;
+}
+
+/* Bootstrap toast */
+.toasts {
+    position: fixed;
+    top: 127px;
+    right: 0px;
+    z-index: 99999999999;
+    width: 300px;
+}
+
+.toasts .toast {
+    background: #ddc439;
+}
+
+.toast-body {
+    font-size: 1rem;
 }
 
 /* Media queries */
