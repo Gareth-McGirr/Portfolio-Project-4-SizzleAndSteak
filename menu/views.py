@@ -1,5 +1,6 @@
 from django.views.generic import ListView, UpdateView, DeleteView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib import messages
 from menu.forms import CreateMenuForm
 from .models import Menu
 
@@ -47,6 +48,11 @@ class CreateMenuView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         """ Assign create_by to creator """
         form.instance.created_by = self.request.user
 
+        messages.success(
+            self.request,
+            'Successfully created menu'
+        )
+
         return super(CreateMenuView, self).form_valid(form)
 
 
@@ -62,6 +68,10 @@ class EditMenuView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         """ Check user is staff else throw 403 """
+        messages.success(
+            self.request,
+            'Successfully updated menu'
+        )
         return self.request.user.is_staff
 
 
