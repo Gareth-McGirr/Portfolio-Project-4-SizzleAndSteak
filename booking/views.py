@@ -48,7 +48,7 @@ class CreateBookingView(LoginRequiredMixin, CreateView):
 
         messages.success(
             self.request,
-            f'Booking confirmed for {date} at {time}'
+            f'Booking confirmed for {guests} guests on {date}'
         )
 
         return super(CreateBookingView, self).form_valid(form)
@@ -117,7 +117,7 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
         messages.success(
             self.request,
-            f'Successfully updated booking: {self.kwargs["pk"]}'
+            f'Successfully updated booking for {guests} guests on {date}'
         )
         return super(EditBookingView, self).form_valid(form)
 
