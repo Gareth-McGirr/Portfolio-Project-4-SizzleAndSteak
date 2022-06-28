@@ -10,7 +10,7 @@ class CustomMMCF(forms.ModelMultipleChoiceField):
         """
         Returns labels
         """
-        return  str(menuitem)
+        return str(menuitem)
 
 
 class CreateMenuForm(forms.ModelForm):
@@ -22,7 +22,10 @@ class CreateMenuForm(forms.ModelForm):
         Define model, form fields and label
         """
         model = Menu
-        fields = ['name', 'active', 'starters', 'mains', 'deserts', 'drinks', 'sides']
+        fields = [
+            'name', 'active', 'starters', 'mains',
+            'deserts', 'drinks', 'sides'
+        ]
 
     name = forms.CharField()
     active = forms.CheckboxInput()
