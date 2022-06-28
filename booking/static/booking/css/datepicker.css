@@ -4,6 +4,11 @@
     width: 15em;
 }
 
+tr td, tr th {
+    background-color: black !important;
+    color: white;
+}
+
 .ui-datepicker-header a {
     color: #d4c248;
     font-weight: 400;
