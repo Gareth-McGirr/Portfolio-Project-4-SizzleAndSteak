@@ -60,7 +60,7 @@ class EditMenuView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
 class DeleteMenuView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
     """ A view to delete a menu """
     model = Menu
-    success_url = "/booking/managemenus/"
+    success_url = "/menu/managemenus/"
 
     def test_func(self):
         return self.request.user.is_staff
