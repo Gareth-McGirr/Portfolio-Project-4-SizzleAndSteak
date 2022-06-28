@@ -3,7 +3,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from .models import Booking, Table
 from .forms import BookingForm
 
-from django.db.models import Q
+
+
 
 class CreateBookingView(LoginRequiredMixin, generic.CreateView):
     """
@@ -66,6 +67,31 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
     template_name = 'booking/edit_booking.html'
     success_url = "/booking/managebookings"
     model = Booking
+
+    def form_valid(self, form):
+        date = form.cleaned_data['booking_date']
+        time = form.cleaned_data['booking_time']
+        guests = form.cleaned_data['number_of_guests']
+
+        tables_with_capacity = list(Table.objects.filter(
+            capacity__gte=guests
+        ))
+        bookings_on_requested_date = Booking.objects.filter(
+            booking_date=date, booking_time=time)
+
+        for booking in bookings_on_requested_date:
+            for table in tables_with_capacity:
+                if table.table_number == booking.booked_table.table_number:
+                    tables_with_capacity.remove(table)
+                    break
+
+        if tables_with_capacity:
+            lowest_capacity_table = tables_with_capacity[0]
+            for table in tables_with_capacity:
+                if table.capacity < lowest_capacity_table.capacity:
+                    lowest_capacity_table = table
+            form.instance.booked_table = lowest_capacity_table
+        return super(EditBookingView, self).form_valid(form)
 
     def test_func(self):
         if self.request.user.is_staff:
