@@ -2,8 +2,9 @@
 {{ form.media }}
 
 {% block content %}
-<h1 class="text-center">Confirm Booking Deletion</h1>
-<div class="d-flex justify-content-center pt-3">
+
+<div class="form-style text-center p-3 m-3">
+    <h1 class="text-center">Confirm Booking Deletion</h1>
     <form method="post">
         {% csrf_token %}
         <p>Are you sure you want to delete Booking: "{{ object.pk }}"?</p>
@@ -12,7 +13,7 @@
         <p>Date: {{ object.booking_date }}</p>
         <p>Time: {{ object.get_booking_time_display }}</p>
 
-        <input type="submit" value="Confirm" class="btn btn-dark">
+        <input type="submit" value="Confirm" class="btn button-style">
     </form>
 </div>
 {% endblock %}
