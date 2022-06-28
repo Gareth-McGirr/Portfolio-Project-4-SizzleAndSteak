@@ -27,7 +27,7 @@
             <h3>Starters</h5>
             {% for item in menu.starters.all %}
                 <span>{{ item.name }}<span>
-                <span>£{{ item.price }}</span>
+                <span>£{{ item.price|floatformat:2 }}</span>
                 {% if item.contains_nuts %}
                 <p class="sm-text">*Contains nuts*
                     {% endif %}
@@ -44,7 +44,7 @@
             <h3>Main Courses</h3>
             {% for item in menu.mains.all %}
                 <span>{{ item.name }}</span>
-                <span>£{{ item.price }}<span>
+                <span>£{{ item.price|floatformat:2 }}<span>
                 {% if item.contains_nuts %}
                 <p class="sm-text">*Contains nuts*
                     {% endif %}
@@ -61,7 +61,7 @@
             <h3>Desserts</h3>
             {% for item in menu.deserts.all %}
                 <span>{{ item.name }}</span>
-                <span>£{{ item.price }}</span>
+                <span>£{{ item.price|floatformat:2 }}</span>
                 {% if item.contains_nuts %}
                     <p class="sm-text">* Contains nuts
                 {% endif %}
@@ -78,7 +78,7 @@
             <h3>Sides</h3>
             {% for item in menu.sides.all %}
                 <span>{{ item.name }}</span>
-                <span>£{{ item.price }}</span>
+                <span>£{{ item.price|floatformat:2 }}</span>
                 {% if item.contains_nuts %}
                 <p class="sm-text">*Contains nuts*
                     {% endif %}
@@ -95,7 +95,7 @@
             <h3>Drinks</h3>
             {% for item in menu.drinks.all %}
                 <span>{{ item.name }}</span>
-                <span>£{{ item.price }}</span>
+                <span>£{{ item.price|floatformat:2 }}</span>
                 {% if item.contains_nuts %}
                 <p class="sm-text">*Contains nuts*
                     {% endif %}
