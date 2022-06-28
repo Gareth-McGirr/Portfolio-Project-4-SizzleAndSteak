@@ -56,6 +56,10 @@ div.form-check {
     left: 10px;
 }
 
+a.slider {
+    top: 455px;
+}
+
 .hide {
     display: none;
 }
