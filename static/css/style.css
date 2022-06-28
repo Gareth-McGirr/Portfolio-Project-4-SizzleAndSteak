@@ -35,6 +35,25 @@ nav.navbar {
     background-color: black;
 }
 
+ul .dropdown-menu {
+    width: 20%;
+    float: right;
+    clear: right;
+}
+
+i.fa-solid.fa-bars {
+    color: white;
+    font-size: 2rem;
+}
+
+i.fa-solid.fa-bars:hover {
+    color: #ddc439;
+}
+
+.active {
+    color: #ddc439;
+}
+
 /* Footer */
 .footer {
     background-color: black;
