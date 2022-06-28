@@ -41,11 +41,16 @@ class TestViews(TestCase):
         self.assertTemplateUsed(response, 'booking/managebookings.html')
 
     def test_booking_page(self):
-        """ Test create booking """
-        # booking = Booking.objects.filter().first()
+        """ Test create booking when superuser """
         response = self.client.get('/booking/createbooking/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'booking/booking.html')
+
+    def test_edit_booking_page(self):
+        """ Test edit booking when owner """
+        response = self.client.get('/booking/editbooking/1/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'booking/edit_booking.html')
 
     def test_edit_unauthorized(self):
         """
