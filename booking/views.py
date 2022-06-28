@@ -1,11 +1,11 @@
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.views import generic
+from django.views.generic import DeleteView, CreateView, UpdateView, ListView
 from django.contrib import messages
 from .models import Booking, Table
 from .forms import BookingForm
 
 
-class CreateBookingView(LoginRequiredMixin, generic.CreateView):
+class CreateBookingView(LoginRequiredMixin, CreateView):
     """
     View to render createbookings
     and allow user to create a booking
@@ -16,22 +16,30 @@ class CreateBookingView(LoginRequiredMixin, generic.CreateView):
     model = Booking
 
     def form_valid(self, form):
+        """
+        Before form submission, assign table with lowest capacity
+        needed for booking guests
+        """
         form.instance.customer = self.request.user
         date = form.cleaned_data['booking_date']
         time = form.cleaned_data['booking_time']
         guests = form.cleaned_data['number_of_guests']
+        # Filter tables with capacity greater or equal
+        # to the number of guests
         tables_with_capacity = list(Table.objects.filter(
             capacity__gte=guests
         ))
+        # Get bookings on specified date
         bookings_on_requested_date = Booking.objects.filter(
             booking_date=date, booking_time=time)
-
+        # Iterate over bookings to get tables not booked
         for booking in bookings_on_requested_date:
             for table in tables_with_capacity:
                 if table.table_number == booking.booked_table.table_number:
                     tables_with_capacity.remove(table)
                     break
-
+        # Iterate over tables not booked to get lowest
+        # capacity table to assign to booking
         lowest_capacity_table = tables_with_capacity[0]
         for table in tables_with_capacity:
             if table.capacity < lowest_capacity_table.capacity:
@@ -46,7 +54,7 @@ class CreateBookingView(LoginRequiredMixin, generic.CreateView):
         return super(CreateBookingView, self).form_valid(form)
 
 
-class BookingsList(LoginRequiredMixin, generic.ListView):
+class BookingsList(LoginRequiredMixin, ListView):
     """
     View to render ManageBookings
     """
@@ -54,6 +62,7 @@ class BookingsList(LoginRequiredMixin, generic.ListView):
     template_name = 'booking/managebookings.html'
 
     def get_queryset(self):
+        """ Queryset function for manage booking search """
         query = self.request.GET.get('q')
         if query:
             return Booking.objects.filter(id=query)
@@ -63,10 +72,10 @@ class BookingsList(LoginRequiredMixin, generic.ListView):
             return Booking.objects.filter(customer=self.request.user)
 
 
-class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateView):
+class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
     A view to provide a Form to the user
-    to edit an event
+    to edit a booking
     """
     form_class = BookingForm
     template_name = 'booking/edit_booking.html'
@@ -74,22 +83,31 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
     model = Booking
 
     def form_valid(self, form):
+        """
+        Before form submission, run capacity checks and
+        assign to table with lowest capacity
+        """
         date = form.cleaned_data['booking_date']
         time = form.cleaned_data['booking_time']
         guests = form.cleaned_data['number_of_guests']
 
+        # Filter tables with capacity greater or equal
+        # to the number of guests
         tables_with_capacity = list(Table.objects.filter(
             capacity__gte=guests
         ))
+        # Get bookings on specified date
         bookings_on_requested_date = Booking.objects.filter(
             booking_date=date, booking_time=time)
-
+        # Iterate over bookings and remove table from bookings
+        # with capacity
         for booking in bookings_on_requested_date:
             for table in tables_with_capacity:
                 if table.table_number == booking.booked_table.table_number:
                     tables_with_capacity.remove(table)
                     break
-
+        # Iterate over tables with capacity and assign lowest
+        # capacity table
         if tables_with_capacity:
             lowest_capacity_table = tables_with_capacity[0]
             for table in tables_with_capacity:
@@ -101,22 +119,23 @@ class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.UpdateVie
             self.request,
             f'Successfully updated booking: {self.kwargs["pk"]}'
         )
-
         return super(EditBookingView, self).form_valid(form)
 
     def test_func(self):
+        """ Test user is staff or throw 403 """
         if self.request.user.is_staff:
             return True
         else:
             return self.request.user == self.get_object().customer
 
 
-class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, generic.DeleteView):
+class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """ A view to delete a booking """
     model = Booking
     success_url = "/booking/managebookings"
 
     def test_func(self):
+        """ Test user is staff else throw 403 """
         if self.request.user.is_staff:
             return True
         else:

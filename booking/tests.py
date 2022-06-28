@@ -11,7 +11,7 @@ class TestViews(TestCase):
     def setUp(self):
         """ Setup test """
         username = "gareth"
-        password = "£123Hatfdn" # noqa
+        password = "£123Hatfdn"
         user_model = get_user_model()
         # Create user
         self.user = user_model.objects.create_user(
@@ -59,8 +59,8 @@ class TestViews(TestCase):
         """
         user_model = get_user_model()
         # Create second user for 403 errors
-        username='minger'
-        password='Dirty56'
+        username = 'minger'
+        password = 'Dirty56'
         user = user_model.objects.create_user(
             username=username,
             password=password,
@@ -82,8 +82,8 @@ class TestViews(TestCase):
         """
         user_model = get_user_model()
         # Create second user for 403 errors
-        username='minger'
-        password='Dirty56'
+        username = 'minger'
+        password = 'Dirty56'
         user = user_model.objects.create_user(
             username=username,
             password=password,
