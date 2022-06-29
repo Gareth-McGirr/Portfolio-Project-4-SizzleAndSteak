@@ -133,8 +133,8 @@
     {% block extra_js %}
     {{ block.super }}
     <script>
-        menus = document.querySelectorAll('[id^="menu-"]');
-        currentMenu = 0;
+        let menus = document.querySelectorAll('[id^="menu-"]');
+        let currentMenu = 0;
 
         function forward() {
             if (currentMenu < menus.length - 1) {
