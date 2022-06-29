@@ -382,31 +382,70 @@ A favicon was added the website to enable users to easily locate the website in 
 - Home page
 
 
-![Home Page](docs/readme_images/home.JPG)
+![Home Page](docs/wireframes/home.JPG)
 
 
 - Signup page
 
 
-![Sign up Page](docs/readme_images/register.JPG)
+![Sign up Page](docs/wireframes/register.JPG)
 
 - Log in
 
-![Login Page](docs/readme_images/login.JPG)
+![Login Page](docs/wireframes/login.JPG)
 
 - Log Out
 
-![Logout Page](docs/readme_images/logout.JPG)
+![Logout Page](docs/wireframes/logout.JPG)
 
 - Create Booking
 
-![Logout Page](docs/readme_images/create_booking.JPG)
+![Create Booking](docs/wireframes/create_booking.JPG)
 
 - Edit Booking 
 
-![Logout Page](docs/readme_images/edit_booking.JPG)
+![Edit Booking](docs/wireframes/edit_booking.JPG)
+
+- Manage Bookings
+
+![Manage Bookings](docs/wireframes/manage_booking.JPG)
+
+- Delete Booking 
+
+![Delete Booking](docs/wireframes/delete_booking.JPG)
+
+- Create Menu 
+
+![Create Menu](docs/wireframes/create_menu.JPG)
+
+- Edit Menu 
+
+![Edit Menu](docs/wireframes/edit_menu.JPG)
+
+- View Menu 
+
+![View Menu](docs/wireframes/view_menu.JPG)
 
 
+- Manage Menus
+
+![Manage Menu](docs/wireframes/manage_menus.JPG)
+
+- Delete Menu 
+
+![Delete Menu](docs/wireframes/delete_menu.JPG)
+
+- 404 Error 
+
+![404 Error](docs/wireframes/404.JPG)
+
+- 403 Error 
+
+![403 Error](docs/wireframes/403.JPG)
+
+- 500 Error 
+
+![500 Error](docs/wireframes/500.JPG)
 
 ### Database-Design
 
