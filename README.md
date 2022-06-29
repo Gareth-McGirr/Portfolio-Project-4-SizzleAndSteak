@@ -26,8 +26,6 @@ Sizzle and Steak is a fictional restaurant located beside the sea in County Antr
             * [Imagery](#Imagery)
 * [Technologies](#Technologies)
 * [Testing](#Testing)
-    * [Test Strategy](#Test-Strategy)
-    * [Test Results](#Test-Results)
 * [Deployment](#Deployment)
     * [Version Control](#Version-Control)
     * [Heroku Deployment](#Heroku-Deployment)
@@ -580,40 +578,7 @@ The hero image was taken from Pexels which is a royalty free image site.
 
 ## Testing
 
-### Responsiveness
-
-
-
-### Accessibility
-
-
-
-**Navigation Links**
-
-Testing was performed to ensure all navigation links on the respective pages, navigated to the correct pages as per design. This was done by clicking on the navigation links on each page.
-
-| Navigation Link | Page to Load    |
-| --------------- | --------------- |
-|                 |                 |
-
-
-
-
-**Footer**
-
-Testing was performed .......
-
-
-
-
-**Validator Testing**
-
-
-
-**Lighthouse Report**
-
-Lighthouse report generated showed.....
-
+Test cases and results can be found in the [TESTING.md](TESTING.md) file. This was moved due to the size of the file.
 
 ## Deployment
 
@@ -632,6 +597,28 @@ The following git commands were used throughout development to push code to the 
 ### Heroku Deployment
 
 The site was deployed to Heroku. The steps to deploy are as follows:
+
+- Navigate to heroku and create an account
+- Click the new button in the top right corner
+- Select create new app
+- Enter app name
+- Select region and click create app
+- Click the resources tab and search for Heroku Postgres
+- Select hobby dev and continue
+- Go to the settings tab and then click reveal config vars
+- Add the following config vars:
+  - SECRET_KEY: (Your secret key)
+  - DATABASE_URL: (This should already exist with add on of postgres)
+  - EMAIL_HOST_USER: (email address)
+  - EMAIL_HOST_PASS: (email app password)
+  - CLOUNDINARY_URL: (cloudinary api url)
+- Click the deploy tab
+- Scroll down to Connect to GitHub and sign in / authorize when prompted
+- In the search box, find the repositoy you want to deploy and click connect
+- Scroll down to Manual deploy and choose the main branch
+- Click deploy
+
+The app should now be deployed.
 
 The live link can be found here: [Live Site](https://sizzle-and-steak.herokuapp.com/)
 
