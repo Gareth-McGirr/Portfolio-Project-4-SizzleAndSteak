@@ -367,6 +367,10 @@ The following stories were implemented in order to set up a base structure for a
 
 ``As a developer, I need to set up the project so that it is ready for implementing the core features``
 
+**Favicon**
+
+A favicon was added the website to enable users to easily locate the website in the browser when multiple tabs are open.
+
 ### Features Left To Implement
 - Add any features that are not yet implemented
 
