@@ -25,7 +25,7 @@ main {
 /* Hero Image */
 
 .hero-img {
-    background-image: url("/static/images/hero-img.webp");
+    background-image: url("https://res.cloudinary.com/gmg-media-storage/image/upload/v1656528653/hero-img_jb0cox.webp");
     height: 400px;
     background-position: bottom;
     background-repeat: no-repeat;
