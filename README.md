@@ -1,10 +1,57 @@
 # Sizzle and Steak
 
 
+## Table of Contents
+* [User Experience Design (UX)](#User-Experience-Design)
+    * [The Strategy Plane](#The-Strategy-Plane)
+        * [Site Goals](#Site-Goals)
+        * [Agile Planning](#Agile-Planning)
+          * [Epics](#Epics)
+          * [User Stories](#User-Stories)
+    * [The Scope Plane](#The-Scope-Plane)
+    * [The Structure Plane](#The-Structure-Plane)
+      * [Features](#Features)
+      * [Future Features](#Features-Left-to-Implement)
+    * [The Skeleton Plane](#The-Skeleton-Plane)
+        * [Wireframes](#Wireframes)
+        * [Database Design](#Database-Design)
+        * [Security](#Security)
+    * [The Surface Plane](#The-Surface-Plane)
+        * [Design](#Design)
+            * [Colour Scheme](#Colour-Scheme)
+            * [Typography](#Typography)
+            * [Imagery](#Imagery)
+* [Technologies](#Technologies)
+* [Testing](#Testing)
+    * [Test Strategy](#Test-Strategy)
+    * [Test Results](#Test-Results)
+* [Deployment](#Deployment)
+    * [Version Control](#Version-Control)
+    * [Heroku Deployment](#Heroku-Deployment)
+    * [Run Locally](#Run-Locally)
+    * [Fork Project](#Fork-Project)
+* [Credits](#Credits)
+  * [Content](#Content)
+  * [Acknowledgements](#Acknowledgements)
 
-## Features
+# User-Experience-Design
 
-### Site wide
+## The-Strategy-Plane
+
+### Site-Goals
+### Agile Planning
+#### Epics
+#### User Stories
+
+## The-Scope-Plane
+
+
+## The-Structure-Plane
+
+### Features
+
+**Site wide**
+
 * Navigation Menu
     * Contains links to ........ pages and will be responsive on all devices.
     * This will allow users to easily navigate between the pages within the site on any size device. 
@@ -25,22 +72,34 @@
 
 
 
-*Home Page*
+**Home Page**
 
 - Add home page info here
-  
 
 
-
-*Menus Page*
+**Menus Page**
 
 - Display sample menus for users to browse
           
-            
 
 
-### Features left to implement
+### Features Left To Implement
 - Add any features that are not yet implemented
+
+
+## The-Skeleton-Plane
+
+### Wireframes
+### Database-Design
+### Security
+
+
+## The-Surface-Plane
+### Design
+### Colour-Scheme
+### Typography
+### Imagery
+
 
 ## Wireframes
 
@@ -123,14 +182,13 @@ The following git commands were used throughout development to push code to the 
 
 ```git push``` - This command was used to push all committed code to the remote repository on github.
 
-### Deployment to Heroku
+### Heroku Deployment
 
 - The site was deployed to Heroku. The steps to deploy are as follows:
-  
 
 The live link can be found here:
 
-### Clone the Repository Code Locally
+### Run Locally
 
 Navigate to the GitHub Repository you want to clone to use locally:
 
@@ -141,6 +199,8 @@ Navigate to the GitHub Repository you want to clone to use locally:
 - Type git clone copied-git-url into the IDE terminal
 
 The project will now have been cloned on your local machine for use.
+
+### Fork Project
 
 ## Credits 
 
