@@ -2,6 +2,8 @@
 
 Sizzle and Steak is a fictional restaurant located beside the sea in County Antrim, Northern Ireland. The app is a restaurant management system designed too allow staff to easily manage the menus and bookings. It also provides customers with a simple, easy to use booking system where they can view and manage their own reservations.
 
+![Mock Up](docs/readme_images/mockup.PNG)
+
 ## Table of Contents
 * [User Experience Design (UX)](#User-Experience-Design)
     * [The Strategy Plane](#The-Strategy-Plane)
@@ -195,6 +197,8 @@ The following navigation items are available on all pages:
 
 The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices.
 
+![Navbar](docs/readme_images/navbar.PNG)
+
 ``USER STORY - As a restaurant owner, I would like a home page so that customers can view information on my restaurant``
 
 Implementation:
@@ -207,6 +211,12 @@ Under the information section are two buttons, 'Make a booking' and 'View Menus'
 
 The last section of the home page contains a google map, marking the location of the restaurant and the opening hours of the restaurant. This will allow the user to locate the restaurant and operating times.
 
+![Hero Image](docs/readme_images/hero.PNG)
+
+![Welcome Section](docs/readme_images/welcome.PNG)
+
+![Find Us](docs/readme_images/find-us.PNG)
+
 
 ``USER STORY - As a developer, I need to create the footer with social media links and contact information``
 
@@ -216,6 +226,8 @@ Implementation:
 
 A footer has been added to the bottom of the site, this contains a Twitter and Facebook link so that users can follow the restaurant on social media if they want to keep up to date with special offers not advertised on the website. These icons has aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site.
 
+![Footer](docs/readme_images/footer.PNG)
+
 ``USER STORY - As a staff user, I want to be able to create a new menu when we have new dishes to offer``
 
 Implementation:
@@ -223,6 +235,8 @@ Implementation:
 **Create Menu Page**
 
 A create menu page was implemented to allow staff users to create new menus via the UI without having to use the backend admin panel. This will allow staff the ability to quickly update menus when they have made changes to the food being offered.
+
+![Create Menu](docs/readme_images/create-menu.PNG)
 
 ``USER STORY -As a user, I would like to be able to view menus so that I can decide if I would like to dine at the restaurant``
 
@@ -232,6 +246,8 @@ Implementation:
 
 A menu page has been implemented to allow users to see the current active menus and decide whether they are interested in the food we offer before booking. This is visible to all users regardless of logged in state as it is not user friendly to restrict core information from users to force them into signing up.
 
+![View Menus](docs/readme_images/menus.PNG)
+
 ``USER STORY -As a staff user, I want to be able to edit a menu when updates are needed``
 
 Implementation:
@@ -239,6 +255,8 @@ Implementation:
 **Edit Menu Page**
 
 On the manage menus page a button was added to allow staff members to edit a menu when changes need to be made.
+
+![Edit Menu](docs/readme_images/edit-menu.PNG)
 
 ``USER STORY -As a staff member, I would like to receive feedback when I create or update menus so that I can see they have worked``
 
@@ -256,6 +274,8 @@ Implementation:
 
 On the manage menus page, a delete button has been implemented that will take staff users to a confirmation page to allow them to delete a menu. This will allow staff to delete menus when they are no longer needed
 
+![Delete Menu](docs/readme_images/delete-menu.PNG)
+
 ``USER-STORY - As a user, I would like to be able to create a new booking when I want to visit the restaurant``
 
 Implementation:
@@ -268,6 +288,8 @@ Extensive logic was added to the form validation to ensure that not only is ther
 
 This allows for seat optimisation to ensure we do not have small amounts of guests at tables that could of been booked for larger groups. Ensuring table optimisation and revenue for the restaurant.
 
+![Create Booking](docs/readme_images/create-booking.PNG)
+
 ``USER-STORY - As a user, I would like to view my bookings when I need to check the information``
 
 Implementation:
@@ -278,6 +300,8 @@ A manage bookings page was implemented with validation checks on the user. This 
 
 For restaurant staff users, all bookings will be available to display so that can can easily view numbers and future bookings.
 
+![Manage Bookings](docs/readme_images/manage-bookings.PNG)
+
 ``USER-STORY - As a user, I would like to be able to edit a booking so that I can make changes when needed``
 
 Implementation:
@@ -287,6 +311,8 @@ Implementation:
 On the manage bookings page an edit button is present that allows the user to direct to a form and update their booking when required. This will allow the user to easily manage their own booking.
 
 For staff users, they can also edit bookings from the manage booking page, even if they did not create the reservation. This will allow restaurant staff to ammend details as needed.
+
+![Edit Booking](docs/readme_images/edit-booking.PNG)
 
 ``USER-STORY - As a user, I would like to receive feedback when I create a booking or edit one so I know it was completed successfully``
 
@@ -304,6 +330,8 @@ Implementation:
 
 A search box was added to the manage bookings page that is only visible to staff users. This will allow the staff members to easily locate a booking by reference number if they need to find it quickly.
 
+[Search Boxes](docs/readme_images/search.PNG)
+
 ``USER-STORY - As a user I would like to delete a booking when I no longer require it``
 
 Implementation:
@@ -313,6 +341,8 @@ Implementation:
 A delete button was added to the manage bookings page that will allow customers to delete their booking should they no longer require it without the need to call the restaurant.
 
 For staff members, they also have the abaility to delete any booking through the UI as well. This will allow staff to free up table capacity should a customer call to cancel their booking.
+
+![Delete Booking](docs/readme_images/delete-booking.PNG)
 
 Favicon
     * A site wide favicon will be implemented with .....
@@ -559,9 +589,9 @@ The following git commands were used throughout development to push code to the 
 
 ### Heroku Deployment
 
-- The site was deployed to Heroku. The steps to deploy are as follows:
+The site was deployed to Heroku. The steps to deploy are as follows:
 
-The live link can be found here:
+The live link can be found here: [Live Site](https://sizzle-and-steak.herokuapp.com/)
 
 ### Run Locally
 
