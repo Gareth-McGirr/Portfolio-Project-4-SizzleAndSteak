@@ -1,5 +1,6 @@
 # Sizzle and Steak
 
+Sizzle and Steak is a fictional restaurant located beside the sea in County Antrim, Northern Ireland. The app is a restaurant management system designed too allow staff to easily manage the menus and bookings. It also provides customers with a simple, easy to use booking system where they can view and manage their own reservations.
 
 ## Table of Contents
 * [User Experience Design (UX)](#User-Experience-Design)
