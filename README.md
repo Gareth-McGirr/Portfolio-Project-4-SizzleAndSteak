@@ -264,6 +264,15 @@ A 500 error page has been displayed to alert users when an internal server error
 - Display sample menus for users to browse
           
 
+**Base Setup User Stories**
+
+The following stories were implemented in order to set up a base structure for all the HTML pages and the core installations and configurations needed to run the application. While these do not show as individual features, they were stories completed that were needed to implement all of the stories above.
+
+``As a developer, I need to create the base.html page and structure so that other pages can reuse the layout``
+
+``As a developer, I need to create static resources so that images, css and javascript work on the website``
+
+``As a developer, I need to set up the project so that it is ready for implementing the core features``
 
 ### Features Left To Implement
 - Add any features that are not yet implemented
