@@ -523,7 +523,9 @@ The hero image was taken from Pexels which is a royalty free image site.
 - CSS
   - The Website was styled using custom CSS in an external file.
 - JavaScript
-  - .
+  - JavaScript was used to make the custom slider on the menu page change and the bootstrap date picker.
+- Python
+  - Python was the main programming language used for the application using the Django Framework.
 - Visual Studio Code
   - The website was developed using Visual Studio Code IDE
 - GitHub
@@ -540,6 +542,41 @@ The hero image was taken from Pexels which is a royalty free image site.
   - This was used to create the logo in header 
 - TinyPNG
   - This was used to compress the hero image for optimal load times
+
+**Python Modules Used**
+
+* Django Class based views (ListView, UpdateView, DeleteView, CreateView) - Used for the classes to create, read, update and delete
+* Mixins (LoginRequiredMixin, UserPassesTestMixin) - Used to enforce login required on views and test user is authorized to perform actions
+* messages - Used to pass messages to the toasts to display feedback to the user upon actions
+* timedelta, date - Date was used in order to search for objects by date and timedelta for searching date ranges
+
+**External Python Modules**
+
+* cloudinary==1.29.0 - Cloundinary was set up for use but no custom uploads were made, settings remain for future development
+* crispy-bootstrap5==0.6 - This was used to allow bootstrap5 use with crispy forms
+* cryptography==37.0.2 - Installed as dependency with another package
+* defusedxml==0.7.1 - Installed as dependency with another package
+* dj-database-url==0.5.0 - Used to parse database url for production environment
+* dj3-cloudinary-storage==0.0.6 - Storage system to work with cloudinary
+* Django==4.0.5 - Framework used to build the application
+* django-admin-rangefilter==0.8.4 - This was used to search bookings in the admin for a range between 2 dates
+* django-allauth==0.51.0 - Used for the sites authentication system, sign up, sign in, logout, password resets ect.
+* django-crispy-forms==1.14.0 - Used to style the forms on render
+* django-model-utils==4.2.0 - Installed as dependency with another package
+* gunicorn==20.1.0 - Installed as dependency with another package
+* idna==3.3 - Installed as dependency with another package
+* oauthlib==3.2.0 - Installed as dependency with another package
+* psycopg2==2.9.3 - Needed for heroku deployment
+* pycparser==2.21 - Installed as dependency with another package
+* PyJWT==2.4.0 - Installed as dependency with another package
+* python3-openid==3.2.0 - Installed as dependency with another package
+* requests==2.27.1 - Installed as dependency with another package
+* requests-oauthlib==1.3.1 - Installed as dependency with another package (allauth authentication)
+* six==1.16.0 - Installed as dependency with another package
+* sqlparse==0.4.2 - Installed as dependency with another package
+* tzdata==2022.1 - Installed as dependency with another package
+* urllib3==1.26.9 - Installed as dependency with another package
+* whitenoise==6.2.0 - Used to serve static files directly without use of static resource provider like cloundinary
 
 ## Testing
 
