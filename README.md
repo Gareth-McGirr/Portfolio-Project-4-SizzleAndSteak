@@ -162,16 +162,42 @@ Tasks:
 
 ## The-Scope-Plane
 
+* Responsive Design - Site should be fully functional on all devices from 320px up
+* Ham burger menu for mobile devices
+* Ability to perform CRUD functionality on Menus and Bookings
+* Restricted role based features
+* Home page with resturant information
 
 ## The-Structure-Plane
 
 ### Features
 
-**Site wide**
+**Navigation Menu**
 
-* Navigation Menu
-    * Contains links to ........ pages and will be responsive on all devices.
-    * This will allow users to easily navigate between the pages within the site on any size device. 
+ The Navigation contains links for Home, Bookings, Menus and has allauth options.
+
+The following navigation items are available on all pages:
+  * Home -> index.html - Visible to all
+  * Bookings (Drop Down):
+    * Manage Bookings -> managebookings.html - Visible to logged in users
+    * New Booking -> booking.html - Visible to logged in users
+  * Menus (Drop Down):
+    * View Menus -> menus.html - Visible to all
+    * Create Menu -> create_menu.html - Visible to staff
+    * Manage Menus -> managemenus - Visible to staff
+  * Login -> login.html - Visible to logged out users
+  * Register -> signup.html - Visible to logged out users
+  * Logout -> logout.html - Visible to logged in users
+
+The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices.
+
+**Home Page**
+
+The home page contains resturant information at the top of the page. This will immediately make it evident to the user, what the purpose of the web site is.
+
+Under the information section are two buttons, 'Make a booking' and 'View Menus'. These buttons will allow the user a quick way to the respective pages if they wish to make a booking or view the restaurants active menus.
+
+The last section of the home page contains a google map, marking the location of the restaurant and the opening hours of the restaurant. This will allow the user to locate the restaurant and operating times.
 
 
 * Footer
