@@ -32,8 +32,8 @@ class Booking(models.Model):
     booking_time = models.IntegerField(choices=BOOKING_TIME, default=1)
 
     class Meta:
-        """ Order by booking_date """
-        ordering = ['booking_date']
+        """ Order by booking_date and then booking_time """
+        ordering = ['booking_date', 'booking_time']
 
     def __str__(self):
         return str(self.pk)
