@@ -20,6 +20,16 @@ main {
     background-color: #8f773c9e;
 }
 
+/* Hero Image */
+
+.hero-img {
+    background-image: url("/static/images/hero-img.webp");
+    height: 400px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* Navbar */
 
 nav.navbar {

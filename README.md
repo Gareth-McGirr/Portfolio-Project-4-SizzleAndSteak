@@ -201,11 +201,12 @@ Implementation:
 
 **Home Page**
 
-The home page contains resturant information at the top of the page. This will immediately make it evident to the user, what the purpose of the web site is.
+The home page contains a hero image of a seaside restaurant and the resturant information at the top of the page. This will immediately make it evident to the user, what the purpose of the web site is.
 
 Under the information section are two buttons, 'Make a booking' and 'View Menus'. These buttons will allow the user a quick way to the respective pages if they wish to make a booking or view the restaurants active menus.
 
 The last section of the home page contains a google map, marking the location of the restaurant and the opening hours of the restaurant. This will allow the user to locate the restaurant and operating times.
+
 
 ``USER STORY - As a developer, I need to create the footer with social media links and contact information``
 
