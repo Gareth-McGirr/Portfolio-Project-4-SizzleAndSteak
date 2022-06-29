@@ -14,14 +14,14 @@
         <form method='GET' class="mb-3">
             <input type='text' name='q' value='{{ request.GET.q }}' autocomplete="off" aria-label="Search Booking by reference"
                 placeholder="Search Booking Ref">
-            <button class="btn p-0 search-btn" type='submit' value="Search Booking by ref">
+            <button class="btn p-0 search-btn" type='submit' value="Search Booking by ref" aria-label="Click to search by booking ref">
                 <i class="fas fa-search"></i>
             </button>
         </form>
         <form method='GET' class="mb-3">
             <input type='text' name='d' value='{{ request.GET.d }}' class="datepicker" autocomplete="off" aria-label="Search Bookings by date"
                 placeholder="Search Booking Date">
-            <button class="btn p-0 search-btn" type='submit' value="Search Booking by ref">
+            <button class="btn p-0 search-btn" type='submit' value="Search Booking by ref" aria-label="Click to search by date">
                 <i class="fas fa-search"></i>
             </button>
         </form>
@@ -41,8 +41,8 @@
                     <th>Table:</th>
                     <th>Capacity:</th>
                     {% endif %}
-                    <th></th>
-                    <th></th>
+                    <th><span class="sr-only">Edit Button Column</span></th>
+                    <th><span class="sr-only">Delete Button Column</span></th>
                 </tr>
             </thead>
             {% for booking in object_list %}
