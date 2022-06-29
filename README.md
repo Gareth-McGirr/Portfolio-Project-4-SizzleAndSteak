@@ -266,6 +266,8 @@ Implementation:
 
 Custom toasts were added on successful creation and deletion of menus which dsplay success messages to the user to enable them to see that the action completed successfully.
 
+![Menu Toasts](docs/readme_images/toast-menu.PNG)
+
 ``USER STORY -As a staff user, I want to be able to delete a menu when it is no longer used``
 
 Implementation:
@@ -322,6 +324,8 @@ Implementation:
 
 Custom toasts were implemented on the successful creation and editing of bookings. This will provide feedback to the user to relay information that the booking was successfully recieved or updated.
 
+![Booking Toasts](docs/readme_images/booking-toast.PNG)
+
 ``USER-STORY - As a staff user, I want to be able to search a booking by reference to save time searching``
 
 Implementation:
@@ -348,6 +352,7 @@ Favicon
     * A site wide favicon will be implemented with .....
     * This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
 
+![Favicon](docs/readme_images/favicon.PNG)
 
 **Error Pages**
 
