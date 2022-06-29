@@ -259,10 +259,45 @@ Implementation:
 
 A 500 error page has been displayed to alert users when an internal server error occurs. The message relays to users that the problem is on our end, not theirs.
 
-**Menus Page**
+``USER STORY - As a staff user, I want to be able to create a new menu when we have new dishes to offer``
 
-- Display sample menus for users to browse
-          
+Implementation:
+
+**Create Menu Page**
+
+A create menu page was implemented to allow staff users to create new menus via the UI without having to use the backend admin panel. This will allow staff the ability to quickly update menus when they have made changes to the food being offered.
+
+``USER STORY -As a user, I would like to be able to view menus so that I can decide if I would like to dine at the restaurant``
+
+Implementation:
+
+**View Menu Page**
+
+A menu page has been implemented to allow users to see the current active menus and decide whether they are interested in the food we offer before booking. This is visible to all users regardless of logged in state as it is not user friendly to restrict core information from users to force them into signing up.
+
+``USER STORY -As a staff user, I want to be able to edit a menu when updates are needed``
+
+Implementation:
+
+**Edit Menu Page**
+
+On the manage menus page a button was added to allow staff members to edit a menu when changes need to be made.
+
+``USER STORY -As a staff member, I would like to receive feedback when I create or update menus so that I can see they have worked``
+
+Implementation:
+
+**Toasts**
+
+Custom toasts were added on successful creation and deletion of menus which dsplay success messages to the user to enable them to see that the action completed successfully.
+
+``USER STORY -As a staff user, I want to be able to delete a menu when it is no longer used``
+
+Implementation:
+
+**Delete Menu Page**
+
+On the manage menus page, a delete button has been implemented that will take staff users to a confirmation page to allow them to delete a menu. This will allow staff to delete menus when they are no longer needed
 
 **Base Setup User Stories**
 
