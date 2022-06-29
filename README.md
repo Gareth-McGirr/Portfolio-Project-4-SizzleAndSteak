@@ -272,7 +272,19 @@ A 500 error page has been displayed to alert users when an internal server error
 ## The-Skeleton-Plane
 
 ### Wireframes
+
 ### Database-Design
+
+The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model is at the heart of the application as it is connected the the main booking and menu tables, linked by primary/foreign key relationships.
+
+The Menu Items model holds objects that are linked to the Menu Models by a many to many relationship. This allows for staff to create menus with many menu items on.
+
+Bookings are related to the customer (user) by a Foreign Key which allows the users to be able to view and update bookings attached to their accounts.
+
+Entity relationship diagram was created using [DBVisualizer](https://www.dbvis.com/) and shows the schemas for each of the models and how they are related.
+
+![Entity Relationship Diagram](docs/readme_images/erd.JPG)
+
 ### Security
 
 
