@@ -18,6 +18,13 @@
                 <i class="fas fa-search"></i>
             </button>
         </form>
+        <form method='GET' class="mb-3">
+            <input type='text' name='d' value='{{ request.GET.d }}' class="datepicker" autocomplete="off" aria-label="Search Booking by reference"
+                placeholder="Search Booking Ref">
+            <button class="btn p-0 search-btn" type='submit' value="Search Booking by ref">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
     {% endif %}
 
     <div class="form-style">
@@ -78,3 +85,12 @@
 </div>
 
 {%endblock%}
+{% block extra_js %}
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<script>
+    $('.datepicker').datepicker({
+        dateFormat: 'yy-mm-dd',
+    });
+</script>
+{% endblock %}

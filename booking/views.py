@@ -65,9 +65,12 @@ class BookingsList(LoginRequiredMixin, ListView):
     def get_queryset(self):
         """ Queryset function for manage booking search """
         query = self.request.GET.get('q')
+        dates = self.request.GET.get('d')
         print(date.today()-timedelta(days=1))
         if query:
             return Booking.objects.filter(id=query)
+        if dates:
+            return Booking.objects.filter(booking_date=dates)
         if self.request.user.is_staff:
             # returns all bookings with date greater than yesterday
             return Booking.objects.filter(booking_date__gt=(date.today()-timedelta(days=1)))
