@@ -215,6 +215,103 @@ Implementation:
 
 A footer has been added to the bottom of the site, this contains a Twitter and Facebook link so that users can follow the restaurant on social media if they want to keep up to date with special offers not advertised on the website. These icons has aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site.
 
+``USER STORY - As a staff user, I want to be able to create a new menu when we have new dishes to offer``
+
+Implementation:
+
+**Create Menu Page**
+
+A create menu page was implemented to allow staff users to create new menus via the UI without having to use the backend admin panel. This will allow staff the ability to quickly update menus when they have made changes to the food being offered.
+
+``USER STORY -As a user, I would like to be able to view menus so that I can decide if I would like to dine at the restaurant``
+
+Implementation:
+
+**View Menu Page**
+
+A menu page has been implemented to allow users to see the current active menus and decide whether they are interested in the food we offer before booking. This is visible to all users regardless of logged in state as it is not user friendly to restrict core information from users to force them into signing up.
+
+``USER STORY -As a staff user, I want to be able to edit a menu when updates are needed``
+
+Implementation:
+
+**Edit Menu Page**
+
+On the manage menus page a button was added to allow staff members to edit a menu when changes need to be made.
+
+``USER STORY -As a staff member, I would like to receive feedback when I create or update menus so that I can see they have worked``
+
+Implementation:
+
+**Toasts**
+
+Custom toasts were added on successful creation and deletion of menus which dsplay success messages to the user to enable them to see that the action completed successfully.
+
+``USER STORY -As a staff user, I want to be able to delete a menu when it is no longer used``
+
+Implementation:
+
+**Delete Menu Page**
+
+On the manage menus page, a delete button has been implemented that will take staff users to a confirmation page to allow them to delete a menu. This will allow staff to delete menus when they are no longer needed
+
+``USER-STORY - As a user, I would like to be able to create a new booking when I want to visit the restaurant``
+
+Implementation:
+
+**Create booking page**
+
+A booking page was implemented with a form that takes in the customer details and enables the user to easily make a booking through the UI. The form does not take in the logged in users name but it is added on the back end through the form valid function. 
+
+Extensive logic was added to the form validation to ensure that not only is there a table available for the users chosen time and date but also that it has enough seats for the amount of guests. If the form is successful with validation on the front end, logic is in place to find the lowest capacity table to seat the guests for the given date and time.
+
+This allows for seat optimisation to ensure we do not have small amounts of guests at tables that could of been booked for larger groups. Ensuring table optimisation and revenue for the restaurant.
+
+``USER-STORY - As a user, I would like to view my bookings when I need to check the information``
+
+Implementation:
+
+**Manage bookings page**
+
+A manage bookings page was implemented with validation checks on the user. This shows all of the users bookings bookings. This will allow the user to view their upcoming bookings when needed.
+
+For restaurant staff users, all bookings will be available to display so that can can easily view numbers and future bookings.
+
+``USER-STORY - As a user, I would like to be able to edit a booking so that I can make changes when needed``
+
+Implementation:
+
+**Edit Booking Page**
+
+On the manage bookings page an edit button is present that allows the user to direct to a form and update their booking when required. This will allow the user to easily manage their own booking.
+
+For staff users, they can also edit bookings from the manage booking page, even if they did not create the reservation. This will allow restaurant staff to ammend details as needed.
+
+``USER-STORY - As a user, I would like to receive feedback when I create a booking or edit one so I know it was completed successfully``
+
+Implementation:
+
+**Toasts**
+
+Custom toasts were implemented on the successful creation and editing of bookings. This will provide feedback to the user to relay information that the booking was successfully recieved or updated.
+
+``USER-STORY - As a staff user, I want to be able to search a booking by reference to save time searching``
+
+Implementation:
+
+**Searchbox**
+
+A search box was added to the manage bookings page that is only visible to staff users. This will allow the staff members to easily locate a booking by reference number if they need to find it quickly.
+
+``USER-STORY - As a user I would like to delete a booking when I no longer require it``
+
+Implementation:
+
+**Delete Booking Page**
+
+A delete button was added to the manage bookings page that will allow customers to delete their booking should they no longer require it without the need to call the restaurant.
+
+For staff members, they also have the abaility to delete any booking through the UI as well. This will allow staff to free up table capacity should a customer call to cancel their booking.
 
 Favicon
     * A site wide favicon will be implemented with .....
@@ -258,46 +355,6 @@ Implementation:
 **500 Page**
 
 A 500 error page has been displayed to alert users when an internal server error occurs. The message relays to users that the problem is on our end, not theirs.
-
-``USER STORY - As a staff user, I want to be able to create a new menu when we have new dishes to offer``
-
-Implementation:
-
-**Create Menu Page**
-
-A create menu page was implemented to allow staff users to create new menus via the UI without having to use the backend admin panel. This will allow staff the ability to quickly update menus when they have made changes to the food being offered.
-
-``USER STORY -As a user, I would like to be able to view menus so that I can decide if I would like to dine at the restaurant``
-
-Implementation:
-
-**View Menu Page**
-
-A menu page has been implemented to allow users to see the current active menus and decide whether they are interested in the food we offer before booking. This is visible to all users regardless of logged in state as it is not user friendly to restrict core information from users to force them into signing up.
-
-``USER STORY -As a staff user, I want to be able to edit a menu when updates are needed``
-
-Implementation:
-
-**Edit Menu Page**
-
-On the manage menus page a button was added to allow staff members to edit a menu when changes need to be made.
-
-``USER STORY -As a staff member, I would like to receive feedback when I create or update menus so that I can see they have worked``
-
-Implementation:
-
-**Toasts**
-
-Custom toasts were added on successful creation and deletion of menus which dsplay success messages to the user to enable them to see that the action completed successfully.
-
-``USER STORY -As a staff user, I want to be able to delete a menu when it is no longer used``
-
-Implementation:
-
-**Delete Menu Page**
-
-On the manage menus page, a delete button has been implemented that will take staff users to a confirmation page to allow them to delete a menu. This will allow staff to delete menus when they are no longer needed
 
 **Base Setup User Stories**
 
