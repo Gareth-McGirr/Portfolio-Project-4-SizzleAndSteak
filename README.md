@@ -374,6 +374,35 @@ The following stories were implemented in order to set up a base structure for a
 
 ### Wireframes
 
+- Home page
+
+
+![Home Page](docs/readme_images/home.JPG)
+
+
+- Signup page
+
+
+![Sign up Page](docs/readme_images/register.JPG)
+
+- Log in
+
+![Login Page](docs/readme_images/login.JPG)
+
+- Log Out
+
+![Logout Page](docs/readme_images/logout.JPG)
+
+- Create Booking
+
+![Logout Page](docs/readme_images/create_booking.JPG)
+
+- Edit Booking 
+
+![Logout Page](docs/readme_images/edit_booking.JPG)
+
+
+
 ### Database-Design
 
 The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model is at the heart of the application as it is connected the the main booking and menu tables, linked by primary/foreign key relationships.
