@@ -66,12 +66,16 @@ class EditMenuView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     success_url = "/menu/managemenus"
     model = Menu
 
-    def test_func(self):
-        """ Check user is staff else throw 403 """
+    def form_valid(self, form):
+        """ Show toast on success """
         messages.success(
             self.request,
             'Successfully updated menu'
         )
+        return super(EditMenuView, self).form_valid(form)
+
+    def test_func(self):
+        """ Check user is staff else throw 403 """
         return self.request.user.is_staff
 
 
