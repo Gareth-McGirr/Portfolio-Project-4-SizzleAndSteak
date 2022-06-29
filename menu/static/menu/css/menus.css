@@ -77,9 +77,19 @@ https://css-tricks.com/responsive-data-tables/
 
 /* Media queries */
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 768px) {
     div.form-check {
         width: 50%;
+    }
+
+    tbody td:nth-of-type(5), tbody td:nth-of-type(6) {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    div.form-check {
+        width: 33%;
     }
 
     tbody td:nth-of-type(5), tbody td:nth-of-type(6) {
