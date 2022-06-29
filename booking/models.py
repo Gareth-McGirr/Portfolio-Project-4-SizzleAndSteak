@@ -25,6 +25,7 @@ class Booking(models.Model):
     """ Model to create a booking """
     customer = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="booking_customer")
+    booking_name = models.CharField(max_length=25)
     booked_table = models.ForeignKey(
         Table, on_delete=models.CASCADE, related_name="booking_table")
     number_of_guests = models.IntegerField(default=2)

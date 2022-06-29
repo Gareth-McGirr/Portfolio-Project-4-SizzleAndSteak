@@ -8,7 +8,7 @@
     <form method="post">
         {% csrf_token %}
         <p>Are you sure you want to delete Booking: "{{ object.pk }}"?</p>
-        <p>Customer: {{ object.customer }}</p>
+        <p>Name: {{ object.booking_name }}</p>
         <p>Table: {{ object.booked_table }}</p>
         <p>Date: {{ object.booking_date }}</p>
         <p>Time: {{ object.get_booking_time_display }}</p>

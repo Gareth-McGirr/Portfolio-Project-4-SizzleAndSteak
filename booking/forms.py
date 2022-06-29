@@ -11,9 +11,10 @@ class BookingForm(forms.ModelForm):
     class Meta:
         """ Set fields and labels """
         model = Booking
-        fields = ['number_of_guests', 'booking_date', 'booking_time']
+        fields = ['booking_name','number_of_guests', 'booking_date', 'booking_time']
         booking_date = forms.DateField(help_text="Date must be a future date")
         labels = {
+            'booking_name': 'Name',
             'number_of_guests': 'Number Of Guests',
             'booking_date': 'Date',
             'booking_time': 'Time',
