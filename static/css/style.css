@@ -84,6 +84,13 @@ th {
     vertical-align: middle;
 }
 
+hr {
+    width: 33%;
+    margin: 10px auto;
+    color: #ddc439;
+    
+}
+
 td a {
     width: 150px;
 }

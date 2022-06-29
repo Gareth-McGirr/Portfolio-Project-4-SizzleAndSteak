@@ -65,8 +65,23 @@ a.slider {
 }
 
 .sm-text {
-    font-size: 12px;
+    font-size: 10px;
     font-style: italic;
+    font-family: cursive;
+}
+
+.m-text {
+    font-size: 14px;
+    font-family: cursive; 
+    margin-top: 5px;
+    padding-bottom: 5px;
+}
+
+.drink-side {
+    display: flex; 
+    flex-direction: column;
+    width: 100%;
+    height: auto;
 }
 
 /* 
@@ -84,6 +99,21 @@ https://css-tricks.com/responsive-data-tables/
 
     tbody td:nth-of-type(5), tbody td:nth-of-type(6) {
         text-align: center;
+    }
+    .drink-side {
+        flex-direction: row;
+    }
+    .drinks.sides {
+        width: 40%;
+
+    }
+    .sides {
+        width: 50%;
+        align-items: center;
+    }
+    .drinks {
+        width: 50%;
+        align-items: center;
     }
 }
 
