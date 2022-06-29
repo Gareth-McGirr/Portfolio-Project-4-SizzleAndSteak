@@ -7,8 +7,8 @@
     <h1 class="text-center">Confirm Menu Deletion</h1>
     <form method="post">
         {% csrf_token %}
-        <p>Are you sure you want to delete:<p>   
-        <p><h5>{{ object.name }} ?</h5></p>
+        <p>Are you sure you want to delete:</p>   
+        <h5>{{ object.name }} ?</h5>
         <input type="submit" value="Confirm" class="btn button-style">
     </form>
 </div>

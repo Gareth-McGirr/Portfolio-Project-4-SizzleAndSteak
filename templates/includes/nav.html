@@ -3,6 +3,7 @@
     <!-- Nav menu -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
+            <!-- Logo -->
             <a class="navbar-brand" href="{% url 'home' %}">
                 <img src="{% static 'images/logo.png' %}" alt="Sizzle and Steak Logo">
             </a>
@@ -10,6 +11,7 @@
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
+            <!-- Nav Items -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarText">
                 <ul class="navbar-nav text-end mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -25,13 +27,14 @@
                             <li><a class="dropdown-item" aria-current="page" href="{% url 'createbooking' %}">New Booking</a></li>                       
                         </ul>
                     </li>
+                    <!-- Show menu drop downs to staff -->
                     {% if user.is_staff %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        <a class="nav-link dropdown-toggle" href="#" id="staffOptions" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Menus
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <ul class="dropdown-menu" aria-labelledby="staffOptions">
                             <li><a class="dropdown-item" aria-current="page" href="{% url 'menus' %}">View Menus</a></li>
                             <li><a class="dropdown-item" aria-current="page" href="{% url 'createmenu' %}">Create Menu</a></li>
                             <li><a class="dropdown-item" aria-current="page" href="{% url 'managemenus' %}">Manage Menus</a></li>                       

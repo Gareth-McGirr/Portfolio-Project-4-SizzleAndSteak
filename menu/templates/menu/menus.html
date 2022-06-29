@@ -24,10 +24,10 @@
             <img src="{% static 'menu/images/divider.png' %}" class="w-75" alt="Top of the menu swirl image divider">
 
             <div class="starters">
-                <h3>Starters</h5>
+                <h3>Starters</h3>
                 {% for item in menu.starters.all %}
-                <span><h5>{{ item.name }}</h5><span>
-                <span class="m-text">{{ item.description }}<span>
+                <h5>{{ item.name }}</h5>
+                <span class="m-text">{{ item.description }}</span>
                 <span>£{{ item.price|floatformat:2 }}</span>
                 <p class="sm-text">
                 {% if item.contains_nuts %}
@@ -40,15 +40,14 @@
                 *Vegan*
                 </p>
                 {% endif %}
-                <hr>
                 {% endfor %}
             </div>
             <div class="mains mt-2">
                 <h3>Main Courses</h3>
                 {% for item in menu.mains.all %}
-                <span><h5>{{ item.name }}</h5><span>
-                <span class="m-text">{{ item.description }}<span>
-                <span>£{{ item.price|floatformat:2 }}<span>
+                <h5>{{ item.name }}</h5>
+                <span class="m-text">{{ item.description }}</span>
+                <span>£{{ item.price|floatformat:2 }}</span>
                 <p class="sm-text">
                 {% if item.contains_nuts %}
                 *Contains nuts*
@@ -60,14 +59,13 @@
                 *Vegan*
                 </p>
                 {% endif %}
-                <hr>
                 {% endfor %}
             </div>
             <div class="desserts mt-2">
                 <h3>Desserts</h3>
                 {% for item in menu.deserts.all %}
-                <span><h5>{{ item.name }}</h5><span>
-                <span class="m-text">{{ item.description }}<span>
+                <h5 class="menu-title">{{ item.name }}</h5>
+                <span class="m-text">{{ item.description }}</span>
                 <span>£{{ item.price|floatformat:2 }}</span>
                 <p class="sm-text">
                 {% if item.contains_nuts %}
@@ -80,7 +78,6 @@
                 * Vegan
                 </p>
                 {% endif %}
-                <hr>
                 {% endfor %}
             </div>
             <div class="drink-side">
@@ -100,7 +97,6 @@
                     *Vegan*
                     </p>
                     {% endif %}
-                    <hr>
                     {% endfor %}
                 </div>
                 <div class="drinks mt-2">
@@ -119,7 +115,6 @@
                     *Vegan*
                     </p>
                     {% endif %}
-                    <hr>
                     {% endfor %}
                 </div>
             </div>
