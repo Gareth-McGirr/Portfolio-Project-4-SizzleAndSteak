@@ -461,19 +461,24 @@ Entity relationship diagram was created using [DBVisualizer](https://www.dbvis.c
 
 ### Security
 
+Views were secured by using the django class based view mixin, UserPassesTextMixin. A test function was created to use the mixin and checks were ran to ensure that the user who is trying to access the oage is authorized. Any staff restricted functionality, user edit/delete functionality listed in the features was secured using this method.
 
 ## The-Surface-Plane
 ### Design
+
 ### Colour-Scheme
+
+The main color schemes for the website are black (#000000) back ground. White font (#FFF) and the gold (#8f773c9e) was added to borders, button text and hover affects to add a hint of color to the website.
+
 ### Typography
+
+The Roboto font was used throughout the website. This font is from google fonts and was imported into the style sheet.
+
 ### Imagery
 
+The Website logo was made using Canva using the Gold colour to match in with the website color scheme.
 
-## Wireframes
-
-- Home page
-
-- 404 page
+The hero image was taken from Pexels which is a royalty free image site.
 
 
 ## Technolgies
@@ -491,13 +496,15 @@ Entity relationship diagram was created using [DBVisualizer](https://www.dbvis.c
 - Git
   - Used to commit and push code during the development of the Website
 - Font Awesome
-  - .
+  - This was used for various icons throughout the site
 - Favicon.io
   - favicon files were created at https://favicon.io/favicon-converter/
 - balsamiq
   - wireframes were created using balsamiq from https://balsamiq.com/wireframes/desktop/#
 - Canva
   - This was used to create the logo in header 
+- TinyPNG
+  - This was used to compress the hero image for optimal load times
 
 ## Testing
 
@@ -570,6 +577,14 @@ The project will now have been cloned on your local machine for use.
 
 ### Fork Project
 
+Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
+
+- Navigate to the GitHub Repository you want to fork.
+
+- On the top right of the page under the header, click the fork button.
+
+- This will create a duplicate of the full project in your GitHub Repository.
+
 ## Credits 
 
-
+The [Hero Image](https://www.pexels.com/photo/people-dining-at-an-al-fresco-restaurant-by-the-sea-6446203/) was taken from pexels.

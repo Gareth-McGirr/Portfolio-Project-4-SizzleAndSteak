@@ -1,9 +1,11 @@
-/* Generic styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald&family=Roboto&display=swap');
 
+/* Generic styles */
 html,
 body {
     height: 100%;
     color: black;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
