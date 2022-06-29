@@ -207,12 +207,16 @@ Under the information section are two buttons, 'Make a booking' and 'View Menus'
 
 The last section of the home page contains a google map, marking the location of the restaurant and the opening hours of the restaurant. This will allow the user to locate the restaurant and operating times.
 
+``USER STORY - As a developer, I need to create the footer with social media links and contact information``
 
-* Footer
-    * Add footer info here
+Implementation:
+
+**Footer**
+
+A footer has been added to the bottom of the site, this contains a Twitter and Facebook link so that users can follow the restaurant on social media if they want to keep up to date with special offers not advertised on the website. These icons has aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site.
 
 
-* Favicon
+Favicon
     * A site wide favicon will be implemented with .....
     * This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
 
