@@ -1,4 +1,4 @@
-from datetime import datetime, timedelta, date
+from datetime import timedelta, date
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.views.generic import DeleteView, CreateView, UpdateView, ListView
 from django.contrib import messages
@@ -73,10 +73,16 @@ class BookingsList(LoginRequiredMixin, ListView):
             return Booking.objects.filter(booking_date=dates)
         if self.request.user.is_staff:
             # returns all bookings with date greater than yesterday
-            return Booking.objects.filter(booking_date__gt=(date.today()-timedelta(days=1)))
+            return Booking.objects.filter(
+                booking_date__gt=(date.today()-timedelta(days=1))
+                )
         else:
-            # returns all bookings for logged in customer with date greater than yesterday
-            return Booking.objects.filter(customer=self.request.user, booking_date__gt=(date.today()-timedelta(days=1)))
+            # returns all bookings for logged in customer
+            # with date greater than yesterday
+            return Booking.objects.filter(
+                customer=self.request.user,
+                booking_date__gt=(date.today()-timedelta(days=1))
+                )
 
 
 class EditBookingView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
