@@ -1,29 +1,67 @@
 
 ### Responsiveness
 
+All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in WCAG 2.1 Reflow criteria for responsive design on Chrome, Edge, Firefox and Opera browsers.
 
+Steps to test:
+
+- Open browser and navigate to [sizze-and-steak](sizzle-and-steak.herokuapp.com/)
+- Open the developer tools (right click and inspect)
+- Set to responsive and decrease width to 320px
+- Set the zoom to 50%
+-  Click and drag the responsive window to maximum width
+
+Expected:
+
+Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
+
+Actual:
+
+Website behaved as expected.
+
+Website was also opened on the following devices and no responsive issues were seen:
+
+Oukitel C21 Pro
+TCL 30 Pro
+iPhone SE
 
 ### Accessibility
 
+[Wave Accessibility](https://wave.webaim.org/) tool was used throughout development and for final testing of the deployed website to check for any aid accessibility testing.
 
+Testing was focused to ensure the following criteria were met:
+
+- All forms have associated labels or aria-labels so that this is read out on a screen reader to users who tab to form inputs
+- Color contrasts meet a minimum ratio as specified in [WCAG 2.1 Contrast Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
+- Heading levels are not missed or skipped to ensure the importance of content is relayed correctly to the end user
+- All content is contained within landmarks to ensure ease of use for assistive technology, allowing the user to navigate by page regions
+- All not textual content had alternative text or titles so descriptions are read out to screen readers
+- HTML page lang attribute has been set
+- Aria properties have been implemented correctly
+- WCAG 2.1 Coding best practices being followed
 
 **Navigation Links**
 
 Testing was performed to ensure all navigation links on the respective pages, navigated to the correct pages as per design. This was done by clicking on the navigation links on each page.
 
-| Navigation Link | Page to Load    |
-| --------------- | --------------- |
-|                 |                 |
+- Home -> index.html
+- Bookings Drop Down, Manage Bookings -> managebookings.html
+- Bookings Drop Down, New Booking -> create_booking.html
+- Menus Drop Down, View Menu -> menus.html
+- Menus Drop Down, Create Menu -> create_menu.html
+- Menus Drop Down, Manage Menus => manage_menus.html
+- Logout -> Sign out all auth page
+- Login -> Sign in all auth page
+- Register -> Sign up all auth page
+
+All navigation links directed to the corect pages as expected.
 
 
 
 
 **Footer**
 
-Testing was performed .......
-
-
-
+Testing was performed on the footer links by clicking the font awesome icons and ensuring that the facebook icon opened facebook in a new tab and the twitter icon opened twitter in a new tab. These behaved as expected.
 
 **Validator Testing**
 
