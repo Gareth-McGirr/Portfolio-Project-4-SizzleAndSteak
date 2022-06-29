@@ -172,6 +172,10 @@ Tasks:
 
 ### Features
 
+``USER STORY - As a developer, I need to create the navbar so that users can navigate the website from any device``
+
+Implementation:
+
 **Navigation Menu**
 
  The Navigation contains links for Home, Bookings, Menus and has allauth options.
@@ -191,6 +195,10 @@ The following navigation items are available on all pages:
 
 The navigation menu is displayed on all pages and drops down into a hamburger menu on smaller devices. This will allow users to view the site from any device and not take up too much space on mobile devices.
 
+``USER STORY - As a restaurant owner, I would like a home page so that customers can view information on my restaurant``
+
+Implementation:
+
 **Home Page**
 
 The home page contains resturant information at the top of the page. This will immediately make it evident to the user, what the purpose of the web site is.
@@ -209,16 +217,43 @@ The last section of the home page contains a google map, marking the location of
     * This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
 
 
-* 404 Page
-    * A 404 page will be implemented and will display if a user navigates to a broken link.
-    * The 404 page will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need  of the browsers back button.
+**Error Pages**
 
+``USER STORY - As a developer, I need to implement a 404 error page to alert users when they have accessed a page that doesn't exist``
 
+Implementation:
 
-**Home Page**
+**404 Page**
 
-- Add home page info here
+As a developer, I need to implement a 403 error page to redirect unauthorised users to so that I can secure my views
 
+A 404 page has been implemented and will display if a user navigates to a broken link.
+
+The 404 page will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need  of the browsers back button.
+
+``USER STORY - As a developer, I need to implement a 500 error page to alert users when an internal server error occurs``
+
+Implementation:
+
+**403 Page**
+
+A 403 error page has been implemented to provide feedback to the user when they try to access unauthorized content. Users will be directed to this page if they alter the URL's and attempt to edit, delete or access pages that are restricted. 
+
+This covers:
+
+* Create Menu - Only authorized to staff
+* Edit Menu - Only authorized to staff
+* Delete Menu - Only authorized to staff
+* Edit Booking - Only authorized to the customer who created the booking or a staff member
+* Delete booking - Only authorized to the customer who created the booking or a staff member
+
+``USER STORY - As a developer, I need to implement a 500 error page to alert users when an internal server error occurs``
+
+Implementation:
+
+**500 Page**
+
+A 500 error page has been displayed to alert users when an internal server error occurs. The message relays to users that the problem is on our end, not theirs.
 
 **Menus Page**
 
