@@ -87,7 +87,7 @@
                 <div class="sides mt-2">
                     <h3>Sides</h3>
                     {% for item in menu.sides.all %}
-                    <span>{{ item.name }}</span>
+                    <span class="m-text">{{ item.name }}</span>
                     <span>£{{ item.price|floatformat:2 }}</span>
                     <p class="sm-text">
                     {% if item.contains_nuts %}
@@ -105,7 +105,7 @@
                 <div class="drinks mt-2">
                     <h3>Drinks</h3>
                     {% for item in menu.drinks.all %}
-                    <span>{{ item.name }}</span>
+                    <span class="m-text">{{ item.name }}</span>
                     <span>£{{ item.price|floatformat:2 }}</span>
                     <p class="sm-text">
                     {% if item.contains_nuts %}
