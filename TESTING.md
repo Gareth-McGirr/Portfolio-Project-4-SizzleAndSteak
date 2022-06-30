@@ -133,6 +133,32 @@ Booking is successfully deleted
 
 Description:
 
+Ensure a new menu item can be added
+
+Steps:
+
+1. Navigate to the create menu item page from the menu drop down nav item
+2. Enter the following details:
+    - Name: Test Menu
+    - Type: Starter
+    - Description: Test Item
+    - Price: 15.00
+    - Checkbox: Contains Nuts
+
+3. Click Create
+
+Expected:
+
+New menu item is sucessfully added and can be added to a new menu
+
+Actual:
+
+New menu item is sucessfully added and can be added to a new menu
+
+<hr>
+
+Description:
+
 Ensure a new menu can be created
 
 Steps:
