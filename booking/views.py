@@ -146,6 +146,14 @@ class DeleteBookingView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Booking
     success_url = "/booking/managebookings"
 
+    def form_valid(self, form):
+        """ Display toast message on form success """
+        messages.success(
+            self.request,
+            'Successfully deleted booking'
+        )
+        return super(DeleteBookingView, self).form_valid(form)
+
     def test_func(self):
         """ Test user is staff else throw 403 """
         if self.request.user.is_staff:

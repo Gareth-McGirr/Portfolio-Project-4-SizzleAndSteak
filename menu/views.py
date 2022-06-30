@@ -112,6 +112,14 @@ class DeleteMenuView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Menu
     success_url = "/menu/managemenus/"
 
+    def form_valid(self, form):
+        """ Display toast message on form success """
+        messages.success(
+            self.request,
+            'Successfully deleted menu'
+        )
+        return super(DeleteMenuView, self).form_valid(form)
+
     def test_func(self):
         """ Test user is staff else throw 403 """
         return self.request.user.is_staff
