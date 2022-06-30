@@ -1,6 +1,6 @@
 # Sizzle and Steak
 
-Sizzle and Steak is a fictional restaurant located beside the sea in County Antrim, Northern Ireland. The app is a restaurant management system designed too allow staff to easily manage the menus and bookings. It also provides customers with a simple, easy to use booking system where they can view and manage their own reservations.
+Sizzle and Steak is a fictional restaurant located beside the sea in County Antrim, Northern Ireland. The app is a restaurant management system designed to allow staff to easily manage the menus and bookings. It also provides customers with a simple, easy to use booking system where they can view and manage their own reservations.
 
 ![Mock Up](docs/readme_images/mockup.PNG)
 
@@ -41,17 +41,17 @@ Sizzle and Steak is a fictional restaurant located beside the sea in County Antr
 
 ### Site-Goals
 
-The site is aimed to helped restaurant staff to easily manage their menus displayed on the website, as well as keeping track of upcoming bookings and capacity, editing and deleting as neccessary. 
+The site is aimed to help restaurant staff to easily manage the menus displayed on the website, as well as keeping track of upcoming bookings and capacity, editing and deleting as neccessary. 
 
-The site also aims too provide customers with a simple, hassle free way to make reservations without the need to call the restaurant. They will also be able to cancel their bookings or update when needed.
+The site also aims to provide customers with a simple, hassle free way to make reservations without the need to call the restaurant. They will also be able to cancel their bookings or update when needed.
 
 ### Agile Planning
 
-This project was developed using agile methadologies by delivering small features in incremental sprints. There were 3 sprints in total, spaced out evenly over four weeks.
+This project was developed using agile methodologies by delivering small features in incremental sprints. There were 3 sprints in total, spaced out evenly over four weeks.
 
-All projects were assigned to epics, prioritized under the labels, Must have, should have, could have. They were assigned to sprints and story pointed according to complexity. Must have stories were completed first, should haves and then finally should haves. It was done this way to ensure that all core requirements were completed first to give the project a complete feel, with the nice to have features being added should there be capacity.
+All projects were assigned to epics, prioritized under the labels, Must have, should have, could have. They were assigned to sprints and story pointed according to complexity. "Must have" stories were completed first, "should haves" and then finally "could haves". It was done this way to ensure that all core requirements were completed first to give the project a complete feel, with the nice to have features being added should there be capacity.
 
-The Kanban board was created using github projects and can be located [here](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak/projects/1) and can be viewed to see more information on the project cards. All stories expect the documentation tasks have full set of aceptance criteria in order to define the functionality that marks that story as complete.
+The Kanban board was created using github projects and can be located [here](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak/projects/1) and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
 ![Kanban image](docs/readme_images/kanban.PNG)
 
@@ -65,7 +65,7 @@ The base setup epic is for all stories needed for the base set up of the applica
 
 **EPIC 2 - Stand alone Pages**
 
-The stand alone pages epic are for small pages that did not have enough stories to warrant their own full epics. Instead of creating epics for tiny features, these small deliverables were all added under this epic.
+The stand alone pages epic is for small pages that did not have enough stories to warrant their own full epics. Instead of creating epics for tiny features, these small deliverables were all added under this epic.
 
 **EPIC 3 - Authentication Epic**
 
@@ -81,7 +81,7 @@ The booking epic is for all stories that relate to creating, viewing, updating a
 
 **EPIC 6 - Deployment Epic**
 
-This epic is for all stories related to deploying the app to heroku so that is live for staff and customer use.
+This epic is for all stories related to deploying the app to heroku so that the site is live for staff and customer use.
 
 **EPIC 7 - Documentation**
 
@@ -163,10 +163,10 @@ Tasks:
 ## The-Scope-Plane
 
 * Responsive Design - Site should be fully functional on all devices from 320px up
-* Ham burger menu for mobile devices
+* Hamburger menu for mobile devices
 * Ability to perform CRUD functionality on Menus and Bookings
 * Restricted role based features
-* Home page with resturant information
+* Home page with restaurant information
 
 ## The-Structure-Plane
 
@@ -203,7 +203,7 @@ Implementation:
 
 **Home Page**
 
-The home page contains a hero image of a seaside restaurant and the resturant information at the top of the page. This will immediately make it evident to the user, what the purpose of the web site is.
+The home page contains a hero image of a seaside restaurant and the restaurant information at the top of the page. This will immediately make it evident to the user, what the purpose of the website is.
 
 Under the information section are two buttons, 'Make a booking' and 'View Menus'. These buttons will allow the user a quick way to the respective pages if they wish to make a booking or view the restaurants active menus.
 
@@ -222,7 +222,7 @@ Implementation:
 
 **Footer**
 
-A footer has been added to the bottom of the site, this contains a Twitter and Facebook link so that users can follow the restaurant on social media if they want to keep up to date with special offers not advertised on the website. These icons has aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site.
+A footer has been added to the bottom of the site, this contains a Twitter and Facebook link so that users can follow the restaurant on social media if they want to keep up to date with special offers not advertised on the website. These icons have aria-labels added to ensure users with assistive screen reading technology know what the purpose of the links are for. They also open in new tabs as they lead users away from the site.
 
 ![Footer](docs/readme_images/footer.PNG)
 
@@ -262,7 +262,7 @@ Implementation:
 
 **Toasts**
 
-Custom toasts were added on successful creation and deletion of menus which dsplay success messages to the user to enable them to see that the action completed successfully.
+Custom toasts were added on successful creation and deletion of menus which display success messages to the user to enable them to see that the action completed successfully.
 
 ![Menu Toasts](docs/readme_images/toast-menu.PNG)
 
@@ -282,7 +282,7 @@ Implementation:
 
 **Create booking page**
 
-A booking page was implemented with a form that takes in the customer details and enables the user to easily make a booking through the UI. The form does not take in the logged in users name but it is added on the back end through the form valid function. 
+A booking page was implemented with a form that takes in the customer details and enables the user to easily make a booking through the UI. 
 
 Extensive logic was added to the form validation to ensure that not only is there a table available for the users chosen time and date but also that it has enough seats for the amount of guests. If the form is successful with validation on the front end, logic is in place to find the lowest capacity table to seat the guests for the given date and time.
 
@@ -296,9 +296,9 @@ Implementation:
 
 **Manage bookings page**
 
-A manage bookings page was implemented with validation checks on the user. This shows all of the users bookings bookings. This will allow the user to view their upcoming bookings when needed.
+A manage bookings page was implemented with validation checks on the user. This shows all of the users bookings. This will allow the user to view their upcoming bookings when needed.
 
-For restaurant staff users, all bookings will be available to display so that can can easily view numbers and future bookings.
+For restaurant staff users, all bookings will be available to display so that staff can easily view numbers and future bookings.
 
 ![Manage Bookings](docs/readme_images/manage-bookings.PNG)
 
@@ -320,7 +320,7 @@ Implementation:
 
 **Toasts**
 
-Custom toasts were implemented on the successful creation and editing of bookings. This will provide feedback to the user to relay information that the booking was successfully recieved or updated.
+Custom toasts were implemented on the successful creation and editing of bookings. This will provide feedback to the user to relay information that the booking was successfully received or updated.
 
 ![Booking Toasts](docs/readme_images/booking-toast.PNG)
 
@@ -347,8 +347,8 @@ For staff members, they also have the abaility to delete any booking through the
 ![Delete Booking](docs/readme_images/delete-booking.PNG)
 
 Favicon
-    * A site wide favicon will be implemented with .....
-    * This will provide an image in the the tabs header to allow the user to easily identify the website if they have multiple tabs open.
+    * A site wide favicon was implemented.
+    * This provides an image in the tabs header to allow the user to easily identify the website if they have multiple tabs open.
 
 ![Favicon](docs/readme_images/favicon.PNG)
 
@@ -360,13 +360,13 @@ Implementation:
 
 **404 Page**
 
-As a developer, I need to implement a 403 error page to redirect unauthorised users to so that I can secure my views
+As a developer, I need to implement a 404 error page to redirect users to
 
 A 404 page has been implemented and will display if a user navigates to a broken link.
 
 The 404 page will allow the user to easily navigate back to the main website if they direct to a broken link / missing page, without the need  of the browsers back button.
 
-``USER STORY - As a developer, I need to implement a 500 error page to alert users when an internal server error occurs``
+``USER STORY - As a developer, I need to implement a 403 error page to alert users when accessing a page/view that they do not have permission to view``
 
 Implementation:
 
@@ -405,7 +405,7 @@ The following stories were implemented in order to set up a base structure for a
 A favicon was added the website to enable users to easily locate the website in the browser when multiple tabs are open.
 
 ### Features Left To Implement
-- Add any features that are not yet implemented
+- In a future release I would like to implement a page which displays a table map of the restaurant with information displayed on each table of upcoming bookings. This feature would allow staff to easily see if there are any upcoming bookings on the each table and plan accordingly. 
 
 
 ## The-Skeleton-Plane
@@ -498,7 +498,7 @@ Entity relationship diagram was created using [DBVisualizer](https://www.dbvis.c
 
 ### Security
 
-Views were secured by using the django class based view mixin, UserPassesTextMixin. A test function was created to use the mixin and checks were ran to ensure that the user who is trying to access the oage is authorized. Any staff restricted functionality, user edit/delete functionality listed in the features was secured using this method.
+Views were secured by using the django class based view mixin, UserPassesTextMixin. A test function was created to use the mixin and checks were ran to ensure that the user who is trying to access the page is authorized. Any staff restricted functionality, user edit/delete functionality listed in the features was secured using this method.
 
 Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the the repository. In production, these variables were added to the heroku config vars within the project.
 
@@ -507,7 +507,7 @@ Environment variables were stored in an env.py for local development for securit
 
 ### Colour-Scheme
 
-The main color schemes for the website are black (#000000) back ground. White font (#FFF) and the gold (#8f773c9e) was added to borders, button text and hover affects to add a hint of color to the website.
+The main color schemes for the website are black ( #000000 ) ground. White font (#FFF) and the gold (#8f773c9e) was added to borders, button text and hover affects to add a hint of color to the website.
 
 ### Typography
 
@@ -653,3 +653,5 @@ Most commonly, forks are used to either propose changes to someone else's projec
 ## Credits 
 
 The [Hero Image](https://www.pexels.com/photo/people-dining-at-an-al-fresco-restaurant-by-the-sea-6446203/) was taken from pexels.
+
+
