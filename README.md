@@ -496,6 +496,8 @@ Entity relationship diagram was created using [DBVisualizer](https://www.dbvis.c
 
 Views were secured by using the django class based view mixin, UserPassesTextMixin. A test function was created to use the mixin and checks were ran to ensure that the user who is trying to access the oage is authorized. Any staff restricted functionality, user edit/delete functionality listed in the features was secured using this method.
 
+Environment variables were stored in an env.py for local development for security purposes to ensure no secret keys, api keys or sensitive information was added the the repository. In production, these variables were added to the heroku config vars within the project.
+
 ## The-Surface-Plane
 ### Design
 
