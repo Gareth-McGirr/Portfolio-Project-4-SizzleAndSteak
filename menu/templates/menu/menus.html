@@ -8,12 +8,15 @@
 
 {% block content %}
 
+<!-- View menus -->
 <div id="menus" class="mt-3 mb-3 d-flex flex-row justify-content-between shadow">
     <div>
+        <!-- Back button for previous menu -->
         <a role="button" class="slider slider-back" aria-label="Previous Menu" onclick="back()">
             <i class="fa-solid fa-chevron-left"></i>
         </a>
     </div>
+    <!-- Menus -->
     {% for menu in object_list %}
     {% if forloop.counter == 1 %}
     <div id="menu-{{forloop.counter}}" class="col-10 text-center">
@@ -122,6 +125,7 @@
         </div>
         {% endfor %}
         <div>
+            <!-- Forward button for next menu -->
             <a role="button" class="slider slider-forward" aria-label="Next Menu" onclick="forward()">
                 <i class="fa-solid fa-chevron-right"></i>
             </a>
@@ -133,9 +137,11 @@
     {% block extra_js %}
     {{ block.super }}
     <script>
+        // Initialise variables
         let menus = document.querySelectorAll('[id^="menu-"]');
         let currentMenu = 0;
 
+        // Function to handle next menu
         function forward() {
             if (currentMenu < menus.length - 1) {
                 menus[currentMenu].classList.add('hide');
@@ -147,7 +153,7 @@
                 menus[currentMenu].classList.remove('hide');
             }
         }
-
+        // Function to handle previous menu
         function back(loop) {
             if (currentMenu > 0) {
                 menus[currentMenu].classList.add('hide');
