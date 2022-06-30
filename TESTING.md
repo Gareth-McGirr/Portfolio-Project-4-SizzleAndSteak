@@ -8,7 +8,7 @@ Ensure a user can sign up to the website
 
 Steps:
 
-1. Navigate to [sizzle-and-steak](sizzle-and-steak.herokuapp.com) and click Register
+1. Navigate to [sizzle-and-steak](https://sizzle-and-steak.herokuapp.com) and click Register
 2. Enter email, username and password 
 3. Click Sign up
 
@@ -27,7 +27,7 @@ Description:
 Ensure a user can log in once signed up
 
 Steps:
-1. Navigate to [sizzle-and-steak](sizzle-and-steal.herokuapp.com)
+1. Navigate to [sizzle-and-steak](https://sizzle-and-steak.herokuapp.com)
 2. Enter login detailscreated in previous test case
 3. Click login
 
@@ -67,7 +67,7 @@ Ensure a new booking can be created.
 
 Steps:
 
-1. Navigate to [page](sizzle-and-steak.herokuapp.com/booking/createbooking/) - Login if prompted.
+1. Navigate to [page](https://sizzle-and-steak.herokuapp.com/booking/createbooking/) - Login if prompted.
 2. Enter the following:
     - Name: Gareth
     - No Of Guests: 3
@@ -91,7 +91,7 @@ Ensure a booking can be edited.
 
 Steps:
 
-1. Navigate to [page](sizzle-and-steak.herokuapp.com/booking/managebookings/) - Login if prompted.
+1. Navigate to [page](https://sizzle-and-steak.herokuapp.com/booking/managebookings/) - Login if prompted.
 2. Enter the following:
     - Name: Gareth
     - No Of Guests: 5
@@ -265,7 +265,7 @@ The django auto generated code for AUTH_PASSWORD_VALIDATORS were showing up as l
 
 ![PEP8](docs/testing/pep8.PNG)
 
-JavaScript code was run through [JSHINT](jshint.com) javascript validator. lIt flagged up issues with undefined variables as I jad forgotten to use the let keyword. This was fixed and the only warnings remained were that they were unused variables. The functions were called via onclick from the html elements themselves, so are in fact being used.
+JavaScript code was run through [JSHINT](https://jshint.com) javascript validator. lIt flagged up issues with undefined variables as I jad forgotten to use the let keyword. This was fixed and the only warnings remained were that they were unused variables. The functions were called via onclick from the html elements themselves, so are in fact being used.
 
 ![JS validator](docs/testing/javascript.PNG)
 
@@ -281,7 +281,7 @@ All pages were tested to ensure responsiveness on screen sizes from 320px and up
 
 Steps to test:
 
-- Open browser and navigate to [sizze-and-steak](sizzle-and-steak.herokuapp.com/)
+- Open browser and navigate to [sizzle-and-steak](https://sizzle-and-steak.herokuapp.com/)
 - Open the developer tools (right click and inspect)
 - Set to responsive and decrease width to 320px
 - Set the zoom to 50%
