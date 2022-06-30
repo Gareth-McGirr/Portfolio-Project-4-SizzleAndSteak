@@ -246,13 +246,14 @@ All navigation links directed to the corect pages as expected.
 
 Testing was performed on the footer links by clicking the font awesome icons and ensuring that the facebook icon opened facebook in a new tab and the twitter icon opened twitter in a new tab. These behaved as expected.
 
-## Booking Testing
+## Negative Testing
 
 Tests were performed on the create booking to ensure that:
 
 1. A customer cannot book a date in the past
 2. A customer cannot book if no tables are available for the amount of guests
 3. A customer cannot edit a booking with an increased guest size if no tables have capacity
+4. Forms cannot be submitted when required fields are empty
 
 ## Unit Testing
 
