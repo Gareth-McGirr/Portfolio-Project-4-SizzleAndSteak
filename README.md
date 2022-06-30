@@ -480,6 +480,10 @@ A favicon was added the website to enable users to easily locate the website in 
 
 ![500 Error](docs/wireframes/500.JPG)
 
+**Differences to Design**
+
+On the menu page, the original wireframe was to display the menus in a complete linear format but on larger screens this caused a lot of un-neccessary white space on smaller items like drinks and sides. A change was made to have the drinks and sides sit side-by-side on larger screens and stack as originally planned on mobiles.
+
 ### Database-Design
 
 The database was designed to allow CRUD functionality to be available to registered users, when signed in. The user model is at the heart of the application as it is connected the the main booking and menu tables, linked by primary/foreign key relationships.
