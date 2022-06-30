@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+{{ block.super }}
+<link rel="stylesheet" href="{% static 'menu/css/menus.css' %}">
+{% endblock %}
+{% block content %}
+
+<div class="m-3">
+    <form method="POST" action="{% url 'create_menu_item' %}" class="form mb-2 p-2 form-style" enctype="multipart/form-data">
+        <h1 class="text-center">Create Menu Item</h1>
+            {% csrf_token %}
+            {{ form|crispy }}
+            {{ form.media }}
+            <button type="submit" class="btn button-style">Create</button>
+    </form>
+</div>
+
+{% endblock %}

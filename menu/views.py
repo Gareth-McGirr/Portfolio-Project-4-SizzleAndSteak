@@ -1,7 +1,7 @@
 from django.views.generic import ListView, UpdateView, DeleteView, CreateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
-from menu.forms import CreateMenuForm
+from menu.forms import CreateMenuForm, CreateMenuItemForm
 from .models import Menu
 
 
@@ -54,6 +54,34 @@ class CreateMenuView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
         )
 
         return super(CreateMenuView, self).form_valid(form)
+
+
+class CreateMenuItemView(LoginRequiredMixin, UserPassesTestMixin, CreateView):
+    """
+    Create menu view to create a menu item if
+    user is staff
+    """
+    model = Menu
+    form_class = CreateMenuItemForm
+    template_name = 'menu/create_menu_item.html'
+    success_url = '/menu/menus'
+
+    def test_func(self):
+        """ Test user is staff else throw 403 """
+        if self.request.user.is_staff:
+            return True
+        else:
+            return False
+
+    def form_valid(self, form):
+        """ Display toast success on form submit """
+
+        messages.success(
+            self.request,
+            'Successfully created menu item'
+        )
+
+        return super(CreateMenuItemView, self).form_valid(form)
 
 
 class EditMenuView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):

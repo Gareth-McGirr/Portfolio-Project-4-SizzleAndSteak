@@ -49,3 +49,15 @@ class CreateMenuForm(forms.ModelForm):
         queryset=MenuItem.objects.filter(type='side'),
         widget=forms.CheckboxSelectMultiple()
     )
+
+
+class CreateMenuItemForm(forms.ModelForm):
+    """ Create MenuItem form """
+    class Meta:
+        """ Define model, fiels and labels """
+        model = MenuItem
+        fields = [
+            'name', 'type', 'description', 'price',
+            'contains_nuts', 'vegetarian', 'vegan',
+            'gluten_free'
+        ]

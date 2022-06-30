@@ -16,5 +16,8 @@ urlpatterns = [
         ),
     path(
         'delete/<slug:pk>/', views.DeleteMenuView.as_view(), name="delete_menu"
+        ),
+    path(
+        'createmenuitem/', views.CreateMenuItemView.as_view(), name="create_menu_item"
         )
 ]
