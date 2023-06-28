@@ -1,39 +1,40 @@
 # Sizzle and Steak
 
 Sizzle and Steak is a fictional restaurant located beside the sea in County Antrim, Northern Ireland. The app is a restaurant management system designed to allow staff to easily manage the menus and bookings. It also provides customers with a simple, easy to use booking system where they can view and manage their own reservations.
+The live link can be found here: [Live Site - Sizzle and Steak](https://sizzle-and-steak.onrender.com/)
 
 ![Mock Up](docs/readme_images/mockup.PNG)
 
 ## Table of Contents
-* [User Experience Design (UX)](#User-Experience-Design)
-    * [The Strategy Plane](#The-Strategy-Plane)
-        * [Site Goals](#Site-Goals)
-        * [Agile Planning](#Agile-Planning)
-          * [Epics](#Epics)
-          * [User Stories](#User-Stories)
-    * [The Scope Plane](#The-Scope-Plane)
-    * [The Structure Plane](#The-Structure-Plane)
-      * [Features](#Features)
-      * [Future Features](#Features-Left-to-Implement)
-    * [The Skeleton Plane](#The-Skeleton-Plane)
-        * [Wireframes](#Wireframes)
-        * [Database Design](#Database-Design)
-        * [Security](#Security)
-    * [The Surface Plane](#The-Surface-Plane)
-        * [Design](#Design)
-            * [Colour Scheme](#Colour-Scheme)
-            * [Typography](#Typography)
-            * [Imagery](#Imagery)
-* [Technologies](#Technologies)
-* [Testing](#Testing)
-* [Deployment](#Deployment)
-    * [Version Control](#Version-Control)
-    * [Heroku Deployment](#Heroku-Deployment)
-    * [Run Locally](#Run-Locally)
-    * [Fork Project](#Fork-Project)
-* [Credits](#Credits)
-  * [Content](#Content)
-  * [Acknowledgements](#Acknowledgements)
+- [Sizzle and Steak](#sizzle-and-steak)
+  - [Table of Contents](#table-of-contents)
+- [User-Experience-Design](#user-experience-design)
+  - [The-Strategy-Plane](#the-strategy-plane)
+    - [Site-Goals](#site-goals)
+    - [Agile Planning](#agile-planning)
+      - [Epics](#epics)
+      - [User Stories](#user-stories)
+  - [The-Scope-Plane](#the-scope-plane)
+  - [The-Structure-Plane](#the-structure-plane)
+    - [Features](#features)
+    - [Features Left To Implement](#features-left-to-implement)
+  - [The-Skeleton-Plane](#the-skeleton-plane)
+    - [Wireframes](#wireframes)
+    - [Database-Design](#database-design)
+    - [Security](#security)
+  - [The-Surface-Plane](#the-surface-plane)
+    - [Design](#design)
+    - [Colour-Scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
+  - [Technolgies](#technolgies)
+  - [Testing](#testing)
+  - [Deployment](#deployment)
+    - [Version Control](#version-control)
+    - [Heroku Deployment](#heroku-deployment)
+    - [Run Locally](#run-locally)
+    - [Fork Project](#fork-project)
+  - [Credits](#credits)
 
 # User-Experience-Design
 
@@ -626,7 +627,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 
 The app should now be deployed.
 
-The live link can be found here: [Live Site](https://sizzle-and-steak.herokuapp.com/)
+The live link can be found here: [Live Site](https://sizzle-and-steak.onrender.com/)
 
 ### Run Locally
 
